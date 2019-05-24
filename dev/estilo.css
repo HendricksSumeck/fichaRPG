@@ -1,0 +1,16 @@
+body {
+    background-image: url(img/pronto.png);
+    background-repeat: repeat;
+    background-position: cover;
+    background-size: cover;
+}
+
+
+#inicio{
+    color: #fff;
+}
+
+#entrar{
+    padding-left:10px ;
+    padding-top :30px; 
+}
