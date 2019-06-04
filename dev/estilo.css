@@ -14,3 +14,16 @@ body {
     padding-left:10px ;
     padding-top :30px; 
 }
+
+#pwd,#email{
+    width: 280px;
+}
+
+#login{
+    margin-top: 300px;
+    margin-left: 80px;
+}
+
+#bCadastrar{
+    margin-left: 10px;
+}
