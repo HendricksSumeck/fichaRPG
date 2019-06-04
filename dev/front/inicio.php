@@ -27,17 +27,17 @@
         <div class="col-md-3">
             <form id="login">
               <div class="form-group">
-                <label for="email">Email address:</label>
+                <label for="email">Email:</label>
                 <input type="email" class="form-control" id="email">
               </div>
 
               <div class="form-group">
-                <label for="pwd">Password:</label>
+                <label for="pwd">Senha:</label>
                 <input type="password" class="form-control" id="pwd">
               </div>
 
-                <button type="button" class="btn btn-danger">Entrar</button>
-                <button id="bCadastrar"type="button" class="btn btn-danger">Cadastrar</button>
+                <a href="#" type="submit" class="btn btn-danger">Entrar</a>
+                <a href="registrar.php" id="bCadastrar" type="button" class="btn btn-danger">Cadastrar</a>
             </form>
         </div>
     </div>

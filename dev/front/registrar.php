@@ -13,8 +13,29 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script> 
 </head>
 
-<body>
-
+<body id="inicio">
+   
+    
+    <div class="container"></div>
+        <div class="col-md-10">
+            <form id="form-cadastro">
+                <h2>Cadastro de usuário</h2>
+                <div class="form-group">
+                    <label for="nomeUsuario">Nome de usuário: </label>
+                    <input type="text" name="nomeUsuario" id="nomeUsuario" class="form-control">
+                    <label for="email">Email:</label>
+                    <input type="text" name="email" id="Cademail" class="form-control">
+                    <label for="senha">Senha:</label>
+                    <input type="password" name="senha" id="senha" class="form-control">
+                    <label for="confSenha">Confirmar senha:</label>
+                    <input type="password" name="confSenha" id="" class="form-control">
+                </div>
+              
+                <a href="#" type="submit" class="btn btn-danger">Confirmar</a>
+                <a href="inicio.php" type="button" class="btn btn-danger" id="bCadastrar">Cancelar</a>
+                
+            </form>
+    </div>
 
 
 
