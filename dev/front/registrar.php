@@ -1,4 +1,5 @@
-<?php 
+<?php
+/*
     $erros = array(
     "Campo deve ser preenchido.",
     "A senha deve ter pelo menos 6 digitos.",
@@ -21,7 +22,7 @@
         else if(strlen($senha) < 5){
             echo $erros[1];
         }
-    }
+    }*/
 ?>
 
 <!DOCTYPE html>

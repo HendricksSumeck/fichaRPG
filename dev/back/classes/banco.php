@@ -5,7 +5,7 @@
         private $login;
         
         //Cadastro
-        public function verificarRegistro(Cadastro $cadastro){
+        public function verificaRegistro(Cadastro $cadastro){
             require("back/conexao/conexao.php");
             try{
                 $sql = "SELECT email, usuario FROM Login WHERE email = :email OR usuario = :usuario";
