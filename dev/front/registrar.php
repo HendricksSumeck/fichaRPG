@@ -1,3 +1,29 @@
+<?php 
+    $erros = array(
+    "Campo deve ser preenchido.",
+    "A senha deve ter pelo menos 6 digitos.",
+    "As senhas nao conferem.",
+    "Formato de email inválido",
+    "Minimo de 6 caracteres."
+    );
+    
+    
+    if($_POST){
+        $senha = $_POST['senha'];
+        $confSenha = $_POST['confSenha'];
+        
+        if($senha === ""){
+            echo $erros[0];
+        }
+        else if($senha != $confSenha){
+             echo $erros[2];
+        }
+        else if(strlen($senha) < 5){
+            echo $erros[1];
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,19 +44,18 @@
     
     <div class="container"></div>
         <div class="col-md-10">
-            <form id="form-cadastro">
+            <form id="form-cadastro" name="formCadastro" action="inicio.php" method="post">
                 <h2>Cadastro de usuário</h2>
                 <div class="form-group">
                     <label for="nomeUsuario">Nome de usuário: </label>
-                    <input type="text" name="nomeUsuario" id="nomeUsuario" class="form-control">
+                    <input type="text" name="nomeUsuario" id="nomeUsuario" class="form-control" placeholder="Dragon">
                     <label for="email">Email:</label>
-                    <input type="text" name="email" id="Cademail" class="form-control">
+                    <input type="text" name="email" id="Cademail" class="form-control" placeholder="dragon5e@dragon.com">
                     <label for="senha">Senha:</label>
-                    <input type="password" name="senha" id="senha" class="form-control">
+                    <input type="password" name="senha" id="senha" class="form-control" placeholder="Informe sua senha">
                     <label for="confSenha">Confirmar senha:</label>
-                    <input type="password" name="confSenha" id="" class="form-control">
-                </div>
-              
+                    <input type="password" name="confSenha" id="" class="form-control" placeholder="Confirme sua senha">
+                </div>              
                 <a href="#" type="submit" class="btn btn-danger">Confirmar</a>
                 <a href="inicio.php" type="button" class="btn btn-danger" id="bCadastrar">Cancelar</a>
                 
