@@ -19,22 +19,29 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script> 
 
     </div>
+    
 
-    <form id="login">
-      <div class="form-group">
-        <label for="email">Email address:</label>
-        <input type="email" class="form-control" id="email">
-      </div>
+    
+<div class="container" id="containerLogin">
+    <div class="row">
+        <div class="col-md-3">
+            <form id="login">
+              <div class="form-group">
+                <label for="email">Email address:</label>
+                <input type="email" class="form-control" id="email">
+              </div>
 
-      <div class="form-group">
-        <label for="pwd">Password:</label>
-        <input type="password" class="form-control" id="pwd">
-      </div>
+              <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd">
+              </div>
 
-        <button type="button" class="btn btn-danger">Entrar</button>
-        <button id="bCadastrar"type="button" class="btn btn-danger">Cadastrar</button>
-    </form>
-
+                <button type="button" class="btn btn-danger">Entrar</button>
+                <button id="bCadastrar"type="button" class="btn btn-danger">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+</div>
 
 
 

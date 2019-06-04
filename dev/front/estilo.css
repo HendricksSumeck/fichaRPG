@@ -16,12 +16,12 @@ body {
 }
 
 #pwd,#email{
-    width: 280px;
+    width: 310px;
 }
 
-#login{
+#containerLogin{
     margin-top: 300px;
-    margin-left: 80px;
+    margin-right: 180px;
 }
 
 #bCadastrar{
