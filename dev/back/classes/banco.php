@@ -34,15 +34,12 @@
             $validar=$conexao->prepare("SELECT * FROM Login WHERE email=?");
             $validar->execute(array($email));
             if($validar->rowCount() == 0):
-            //executa o cadastro
-            $inserir->execute();
+                //executa o cadastro
+                $inserirserir->execute();
             else:
                 echo "ja existe";
             endif;
-            
-            
         }
-        
     }
 
 

@@ -1,29 +1,3 @@
-<?php
-/*
-    $erros = array(
-    "Campo deve ser preenchido.",
-    "A senha deve ter pelo menos 6 digitos.",
-    "As senhas nao conferem.",
-    "Formato de email inválido",
-    "Minimo de 6 caracteres."
-    );
-    
-    
-    if($_POST){
-        $senha = $_POST['senha'];
-        $confSenha = $_POST['confSenha'];
-        
-        if($senha === ""){
-            echo $erros[0];
-        }
-        else if($senha != $confSenha){
-             echo $erros[2];
-        }
-        else if(strlen($senha) < 5){
-            echo $erros[1];
-        }
-    }*/
-?>
 
 <!DOCTYPE html>
 <html>

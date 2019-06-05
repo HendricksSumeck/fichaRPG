@@ -67,7 +67,6 @@ class Cadastro{
     public function setEmail($email){
         $this->email = email;
     }
-    
 }
 
 
