@@ -32,7 +32,7 @@
                     <input type="password" name="confSenha" id="" class="form-control" placeholder="Confirme sua senha">
                 </div> 
                 <button type="submit" class="btn btn-danger">Confirmar</button>             
-                <a href="inicio.php" type="button" class="btn btn-danger" id="bCadastrar">Cancelar</a>
+                <button class="btn btn-danger"><a href="index.php">Cancelar</a></button>
                 
             </form>
     </div>
