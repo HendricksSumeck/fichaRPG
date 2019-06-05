@@ -19,7 +19,7 @@
     
     <div class="container"></div>
         <div class="col-md-10">
-            <form id="form-cadastro" name="formCadastro" action="inicio.php" method="post">
+            <form id="form-cadastro" name="formCadastro" action="../back/sessoes/cadastrar.php" method="post">
                 <h2>Cadastro de usuário</h2>
                 <div class="form-group">
                     <label for="nomeUsuario">Nome de usuário: </label>
@@ -30,8 +30,8 @@
                     <input type="password" name="senha" id="senha" class="form-control" placeholder="Informe sua senha">
                     <label for="confSenha">Confirmar senha:</label>
                     <input type="password" name="confSenha" id="" class="form-control" placeholder="Confirme sua senha">
-                </div>              
-                <a href="#" type="submit" class="btn btn-danger">Confirmar</a>
+                </div> 
+                <button type="submit" class="btn btn-danger">Confirmar</button>             
                 <a href="inicio.php" type="button" class="btn btn-danger" id="bCadastrar">Cancelar</a>
                 
             </form>

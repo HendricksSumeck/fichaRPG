@@ -17,6 +17,7 @@ class Cadastro{
     
     //Funções
     
+    
     //Criptografia da senha
     public function senhaHash($senha){
         $this->setSenha(md5($senha));

@@ -22,23 +22,13 @@
         
         public function cadastrarUsuario(Cadastro $cadastro){
             require("back/conexao/conexao.php");
-            $email = $_POST["email"];
-            $usuario = $_POST["usuario"];
-            $senha = $_POST["senha"];
             //prepara o cadastro
-            $inserir= $conexao->prepare("INSERT INTO Login(email, usuario, senha) VALUES (:email, :usuario, :senha)");
-            $inserir->bindValue(":email",$email);
-            $inserir->bindValue(":usuario",$usuario);
-            $inserir->bindValue(":senha",$senha);
-            //valida o cadastro
-            $validar=$conexao->prepare("SELECT * FROM Login WHERE email=?");
-            $validar->execute(array($email));
-            if($validar->rowCount() == 0):
-                //executa o cadastro
-                $inserirserir->execute();
-            else:
-                echo "ja existe";
-            endif;
+            $sql= "INSERT INTO Login(email, usuario, senha) VALUES (:email, :usuario, :senha)";
+            $select = $conexao->prepare($sql);
+            $inserir->bindValue(":email", $cadastro->email);
+            $inserir->bindValue(":usuario", $cadastro->usuario);
+            $inserir->bindValue(":senha", $cadastro->senha);
+            $inserir->execute();    
         }
     }
 
