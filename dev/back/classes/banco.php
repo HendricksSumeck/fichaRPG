@@ -29,7 +29,8 @@
             $inserir->bindValue(":email", $cadastro->getEmail());
             $inserir->bindValue(":usuario", $cadastro->getUsuario());
             $inserir->bindValue(":senha", $cadastro->getSenha());
-            $inserir->execute();    
+            $inserir->execute(); 
+            
         }
     }
 
