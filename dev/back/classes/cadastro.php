@@ -2,10 +2,10 @@
 
 class Cadastro{
     //Var
-    public $id_login;
     public $usuario;
     public $senha;
     public $email;
+    public $id_login;
 
     //Construtor
     

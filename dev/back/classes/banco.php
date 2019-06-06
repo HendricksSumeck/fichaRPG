@@ -6,7 +6,7 @@
         
         //Cadastro
         public function verificaRegistro(Cadastro $cadastro){
-            require("back/conexao/conexao.php");
+            require_once("../conexao/conexao.php");
             try{
                 $sql = "SELECT email, usuario FROM Login WHERE email = :email OR usuario = :usuario";
                 $select = $conexao->prepare($sql);
@@ -21,10 +21,11 @@
         }
         
         public function cadastrarUsuario(Cadastro $cadastro){
-            require("back/conexao/conexao.php");
+            require_once("../conexao/conexao.php");
+            require("../sessoes/cadastrar.php");
             //prepara o cadastro
             $sql= "INSERT INTO Login(email, usuario, senha) VALUES (:email, :usuario, :senha)";
-            $select = $conexao->prepare($sql);
+            $select = $pdo->prepare($sql);
             $inserir->bindValue(":email", $cadastro->email);
             $inserir->bindValue(":usuario", $cadastro->usuario);
             $inserir->bindValue(":senha", $cadastro->senha);
