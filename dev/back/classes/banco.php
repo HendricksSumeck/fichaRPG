@@ -24,7 +24,7 @@
             require_once("../conexao/conexao.php");
             //require("../sessoes/cadastrar.php");
             //prepara o cadastro
-            $sql= "INSERT INTO Login(email, usuario, senha) VALUES (:email, :usuario, :senha)";
+            $sql= "INSERT INTO `login`(`email`, `usuario`, `senha`) VALUES (:email, :usuario, :senha)";
             $inserir = $pdo->prepare($sql);
             $inserir->bindValue(":email", $cadastro->getEmail());
             $inserir->bindValue(":usuario", $cadastro->getUsuario());
