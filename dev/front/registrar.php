@@ -23,7 +23,7 @@
                 <h2>Cadastro de usuário</h2>
                 <div class="form-group">
                     <label for="nomeUsuario">Nome de usuário: </label>
-                    <input type="text" name="nomeUsuario" id="nomeUsuario" class="form-control" placeholder="Dragon">
+                    <input type="text" name="usuario" id="nomeUsuario" class="form-control" placeholder="Dragon">
                     <label for="email">Email:</label>
                     <input type="text" name="email" id="Cademail" class="form-control" placeholder="dragon5e@dragon.com">
                     <label for="senha">Senha:</label>
