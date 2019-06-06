@@ -22,13 +22,13 @@
         
         public function cadastrarUsuario(Cadastro $cadastro){
             require_once("../conexao/conexao.php");
-            require("../sessoes/cadastrar.php");
+            //require("../sessoes/cadastrar.php");
             //prepara o cadastro
             $sql= "INSERT INTO Login(email, usuario, senha) VALUES (:email, :usuario, :senha)";
-            $select = $pdo->prepare($sql);
-            $inserir->bindValue(":email", $cadastro->email);
-            $inserir->bindValue(":usuario", $cadastro->usuario);
-            $inserir->bindValue(":senha", $cadastro->senha);
+            $inserir = $pdo->prepare($sql);
+            $inserir->bindValue(":email", $cadastro->getEmail());
+            $inserir->bindValue(":usuario", $cadastro->getUsuario());
+            $inserir->bindValue(":senha", $cadastro->getSenha());
             $inserir->execute();    
         }
     }

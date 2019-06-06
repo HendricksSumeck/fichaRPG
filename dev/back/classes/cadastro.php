@@ -11,7 +11,7 @@ class Cadastro{
     
     function __construct($usuario, $senha, $email){
         $this->usuario = $usuario;
-        $this->senhaHash($senha);
+        $this->senha = $senha;
         $this->email = $email;
     }
     
@@ -19,7 +19,7 @@ class Cadastro{
     
     
     //Criptografia da senha
-    public function senhaHash($senha){
+    public function senha($senha){
         $this->setSenha(md5($senha));
     }
     
