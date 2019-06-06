@@ -8,5 +8,5 @@
 
     $banco = new Banco();
     $cadastro = new Cadastro($_POST['usuario'], $_POST['senha'], $_POST['email']);
-    $i = $banco->cadastrarUsuario($cadastro);
+    //$i = $banco->cadastrarUsuario($cadastro);
 ?>
