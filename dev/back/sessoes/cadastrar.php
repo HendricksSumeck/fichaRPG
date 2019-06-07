@@ -1,15 +1,13 @@
 <?php
     require_once("../classes/banco.php");
     require_once("../classes/cadastro.php");
+    $data = json_decode(file_get_contents("php://input"), true);
+
+    $usuario = $data["usuario"];
+    $email = $data["email"];
+    $senha = $data["senha"];
     
-    //$usuario = $_POST["usuario"];
-    //$email = $_POST["email"];
-    //$senha = $_POST["senha"];
-
-    //return $usuario;
-    var_dump($_POST);
-
-    //$banco = new Banco();
-    //$cadastro = new Cadastro($_POST['usuario'], $_POST['senha'], $_POST['email']);
-    //$banco->cadastrarUsuario($cadastro);
+    $banco = new Banco();
+    $cadastro = new Cadastro($_POST['usuario'], $_POST['senha'], $_POST['email']);
+    $banco->cadastrarUsuario($cadastro);
 ?>
