@@ -42,7 +42,7 @@
                 <span  class="btn btn-danger" id="show-modal" @click="showModal = true">Cadastrar</span>
                 <!-- use the modal component, pass in the prop -->
                     <modal v-if="showModal" @close="showModal = false">
-                        <h3 slot="header">Cadastrar usuario</h3>
+                        <h3 slot="header">Cadastro de usuario</h3>
                         <div slot="body">
                             <form name="formCadastro" action="../back/sessoes/cadastrar.php" method="post">
                                 <div class="form-group">
