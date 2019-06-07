@@ -9,6 +9,20 @@ body {
     color: #fff;
 }
 
+#bodyini{
+  background-image: url(img/backpronto.png);
+ }
+ 
+ #inicio{
+     color: #fff;
+ }
+ 
+ nav {
+     background-color:#8B0000;
+     background-size: 100px;
+ }
+
+
 #entrar{
     padding-left:10px ;
     padding-top :30px; 
