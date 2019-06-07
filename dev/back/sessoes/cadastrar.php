@@ -8,6 +8,6 @@
     $senha = $data["senha"];
     
     $banco = new Banco();
-    $cadastro = new Cadastro($_POST['usuario'], $_POST['senha'], $_POST['email']);
+    $cadastro = new Cadastro($data['usuario'], $data['senha'], $data['email']);
     $banco->cadastrarUsuario($cadastro);
 ?>
