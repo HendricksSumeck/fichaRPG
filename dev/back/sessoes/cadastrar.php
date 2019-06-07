@@ -9,6 +9,5 @@
     
     $banco = new Banco();
     $cadastro = new Cadastro($data['usuario'], $data['senha'], $data['email']);
-    var_dump($cadastro);
-    //$banco->cadastrarUsuario($cadastro);
+    $banco->cadastrarUsuario($cadastro);
 ?>
