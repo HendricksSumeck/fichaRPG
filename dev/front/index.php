@@ -36,37 +36,37 @@
                 <input type="password" class="form-control" id="pwd">
               </div>
 
-            <button href="#" type="submit" class="btn btn-danger">Entrar</button>
-                
+            <button href="#" @submit="formSubmit" class="btn btn-danger">Entrar</button>  
+             <!-- app -->
+             <div id="app">
+                <span  class="btn btn-danger" id="show-modal" @click="showModal = true">Cadastrar</span>
+                <!-- use the modal component, pass in the prop -->
+                    <modal v-if="showModal" @close="showModal = false">
+                        <h3 slot="header">{{saida}}</h3>
+                        <div slot="body">
+                            <form name="formCadastro" action="../back/sessoes/cadastrar.php" method="post">
+                                <div class="form-group">
+                                    <label class="label_cadastro" for="nomeUsuario">Nome de usuário: </label>
+                                    <input type="text" v-model="usuario" id="nomeUsuario" class="form-control" placeholder="Dragon">
+                                    <label class="label_cadastro" for="email">Email:</label>
+                                    <input type="text" v-model="email" id="Cademail" class="form-control" placeholder="dragon5e@dragon.com">
+                                    <label class="label_cadastro" for="senha">Senha:</label>
+                                    <input type="password" v-model="senha" id="senha" class="form-control" placeholder="Informe sua senha">
+                                    <label class="label_cadastro" for="confSenha">Confirmar senha:</label>
+                                    <input type="password" name="confSenha" id="" class="form-control" placeholder="Confirme sua senha">
+                                </div> 
+                                <span @click="cadastrarUsuario" class="btn btn-danger">Confirmar</span>              
+                            </form>
+                        </div>
+                </modal>
+             </div>             
             </form>
+            
         </div>
     </div>
 </div>
 
- <!-- app -->
-            <div id="app">
-                <button  class="btn btn-danger" id="show-modal" @click="showModal = true">Cadastrar</button>
-                <!-- use the modal component, pass in the prop -->
-                    <modal v-if="showModal" @close="showModal = false">
-                        <h3 slot="header">Cadastro de usuario</h3>
-                        <div slot="body">
-                            <form name="formCadastro" action="../back/sessoes/cadastrar.php" method="post">
-                                <div class="form-group">
-                                    <label for="nomeUsuario">Nome de usuário: </label>
-                                    <input type="text" name="usuario" id="nomeUsuario" class="form-control" placeholder="Dragon">
-                                    <label for="email">Email:</label>
-                                    <input type="text" name="email" id="Cademail" class="form-control" placeholder="dragon5e@dragon.com">
-                                    <label for="senha">Senha:</label>
-                                    <input type="password" name="senha" id="senha" class="form-control" placeholder="Informe sua senha">
-                                    <label for="confSenha">Confirmar senha:</label>
-                                    <input type="password" name="confSenha" id="" class="form-control" placeholder="Confirme sua senha">
-                                </div> 
-                                <button type="submit" class="btn btn-danger">Confirmar</button>             
-                                <button class="btn btn-danger"><a href="index.php">Cancelar</a></button>         
-                            </form>
-                        </div>
-                </modal>
-             </div>
+
 
                
 <template id="modalRegistro">
@@ -87,7 +87,7 @@
                     <div class="modal-footer">
                         <slot name="footer">
                             default footer
-                            <button class="modal-default-button" @click="$emit('close')">
+                            <button class="modal-default-button btn btn-danger" @click="$emit('close')">
                                 Fechar
                             </button>
                         </slot>
