@@ -10,4 +10,7 @@
     $banco = new Banco();
     $cadastro = new Cadastro($data['usuario'], $data['senha'], $data['email']);
     $banco->cadastrarUsuario($cadastro);
+
+    $status = json_encode($data);
+    echo $status;
 ?>

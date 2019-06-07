@@ -10,7 +10,8 @@ Vue.component('modal', {
       usuario: '',
       email: '',
       senha: '',
-      saida: ''
+      saida: {},
+      erro: ''
     },
 
     methods: {
@@ -27,7 +28,8 @@ Vue.component('modal', {
         })
         .then(function (response){  
           local.saida = response.data;
-          //console.log(local.usuario);
+          console.log(local.saida);
+          //console.log(response);
         })
         .catch(function (error) {
           console.log(error);

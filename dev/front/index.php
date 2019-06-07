@@ -54,7 +54,7 @@
                                     <input type="password" v-model="senha" id="senha" class="form-control" placeholder="Informe sua senha">
                                     <label class="label_cadastro" for="confSenha">Confirmar senha:</label>
                                     <input type="password" name="confSenha" id="" class="form-control" placeholder="Confirme sua senha">
-                                </div> 
+                                </div>
                                 <span @click="cadastrarUsuario" class="btn btn-danger">Confirmar</span>              
                             </form>
                         </div>
@@ -86,7 +86,6 @@
                     </div>
                     <div class="modal-footer">
                         <slot name="footer">
-                            default footer
                             <button class="modal-default-button btn btn-danger" @click="$emit('close')">
                                 Fechar
                             </button>
