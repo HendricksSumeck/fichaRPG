@@ -16,8 +16,8 @@ class Cadastro{
     
     //Funções
     //Criptografia da senha
-    public function senhaHash($senha){
-        $this->setSenha(md5($senha));
+    public function senhaHash($str){
+        return sha1(md5($str));
     }
     
     //Valida email e usuario
