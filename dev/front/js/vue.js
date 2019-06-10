@@ -1,12 +1,18 @@
 Vue.component('modal', {
     template: '#modalRegistro'
   })
-  
+
+Vue.component('alerta-sucesso', {
+  template: '#alertaSucesso'
+}
+)
+
   // start app
   new Vue({
     el: '#app',
     data: {
       showModal: false,
+      alerta: false,
       usuario: '',
       email: '',
       senha: '',
@@ -24,11 +30,16 @@ Vue.component('modal', {
         axios.post('../back/sessoes/cadastrar.php', {
           usuario: this.usuario,
           email: this.email,
-          senha: this.senha
+          senha: this.senha,
+          erro: 0
         })
         .then(function (response){  
           local.saida = response.data;
-          console.log(local.saida);
+          if(local.saida.erro == 1){
+            local.showModal = false;
+            local.alerta = true;
+          }          
+          //console.log(local.saida);
           //console.log(response);
         })
         .catch(function (error) {
@@ -38,4 +49,6 @@ Vue.component('modal', {
     }
 
   })
+
+
 

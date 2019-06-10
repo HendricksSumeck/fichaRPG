@@ -14,17 +14,10 @@
 </head>
 
 <body id="inicio">
-    <div id="entrar" class="">
-        <a href= "/web/Novapasta/fichaRPG/dev/login/"></a>
-        <a href= "/web/Novapasta/fichaRPG/dev/registrar/"></a>
-
-    </div>
-    
-
-    
+  
 <div class="container" id="containerLogin">
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-3" id="app">
             <form id="login">
               <div class="form-group">
                 <label for="email">Email:</label>
@@ -36,12 +29,14 @@
                 <input type="password" class="form-control" id="pwd">
               </div>
 
-            <button href="#" @submit="formSubmit" class="btn btn-danger">Entrar</button>  
-             <!-- app -->
-             <div id="app">
-                <span  class="btn btn-danger" id="show-modal" @click="showModal = true">Cadastrar</span>
+            <span class="btn btn-danger">Entrar</span>  
+            <span  class="btn btn-danger" id="show-modal" @click="showModal = true">Cadastrar</span>
+            <alerta-sucesso v-if="alerta">
+                {{usuario}}
+            </alerta-sucesso>
+                <div>
                 <!-- use the modal component, pass in the prop -->
-                    <modal v-if="showModal" @close="showModal = false">
+                <modal v-if="showModal" @close="showModal = false">
                         <h3 slot="header">Cadastro de usuario</h3>
                         <div slot="body">
                             <form name="formCadastro" action="../back/sessoes/cadastrar.php" method="post">
@@ -60,14 +55,10 @@
                         </div>
                 </modal>
              </div>             
-            </form>
-            
+            </form>            
         </div>
     </div>
 </div>
-
-
-
                
 <template id="modalRegistro">
     <transition name="modal">
@@ -86,15 +77,21 @@
                     </div>
                     <div class="modal-footer">
                         <slot name="footer">
-                            <button class="modal-default-button btn btn-danger" @click="$emit('close')">
+                            <span class="modal-default-button btn btn-danger" @click="$emit('close')">
                                 Fechar
-                            </button>
+                            </span>
                         </slot>
                     </div>
                 </div>
             </div>
         </div>
   </transition>
+</template>
+
+<template id="alertaSucesso">
+    <div class="alert alert-success" role="alert">                
+        Cadastrado com sucesso
+    </div>
 </template>
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

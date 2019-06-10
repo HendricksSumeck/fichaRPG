@@ -22,16 +22,17 @@
         
         public function cadastrarUsuario(Cadastro $cadastro){
             require_once("../conexao/conexao.php");
-            $hash = senhaHash($cadastro->getSenha());
-            //require("../sessoes/cadastrar.php");
-            //prepara o cadastro
-            $sql= "INSERT INTO `login`(`email`, `usuario`, `senha`) VALUES (:email, :usuario, :senha)";
-            $inserir = $pdo->prepare($sql);
-            $inserir->bindValue(":email", $cadastro->getEmail());
-            $inserir->bindValue(":usuario", $cadastro->getUsuario());
-            $inserir->bindValue(":senha", $hash);
-            $inserir->execute(); 
-            
+            try{
+                $sql= "INSERT INTO `login`(`email`, `usuario`, `senha`) VALUES (:email, :usuario, :senha)";
+                $inserir = $pdo->prepare($sql);
+                $inserir->bindValue(":email", $cadastro->getEmail());
+                $inserir->bindValue(":usuario", $cadastro->getUsuario());
+                $inserir->bindValue(":senha", $cadastro->getSenha());
+                $inserir->execute(); 
+                return 1;
+            }catch(PDOException $erro){
+                return 2;
+            }   
         }
         
         public function verificaLogin(Login $login){
