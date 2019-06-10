@@ -28,8 +28,13 @@ body {
     padding-top :30px; 
 }
 
-#pwd,#email{
+.tamanho_div{
     width: 310px;
+}
+
+.tamanho_div2{
+  width: 310px;
+  margin-top: 5px;
 }
 
 #containerLogin{

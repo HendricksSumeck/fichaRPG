@@ -21,18 +21,18 @@
             <form id="login">
               <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email">
+                <input class="tamanho_div" type="email" class="form-control">
               </div>
 
               <div class="form-group">
                 <label for="pwd">Senha:</label>
-                <input type="password" class="form-control" id="pwd">
+                <input class="tamanho_div" type="password" class="form-control">
               </div>
 
             <span class="btn btn-danger">Entrar</span>  
-            <span  class="btn btn-danger" id="show-modal" @click="showModal = true">Cadastrar</span>
-            <alerta-sucesso v-if="alerta">
-                {{usuario}}
+            <span class="btn btn-danger" id="show-modal" @click="showModal = true">Cadastrar</span>
+            <alerta-sucesso v-if="alerta" class="tamanho_div2">
+                {{usuario}}: Cadastrado com sucesso
             </alerta-sucesso>
                 <div>
                 <!-- use the modal component, pass in the prop -->
@@ -90,7 +90,7 @@
 
 <template id="alertaSucesso">
     <div class="alert alert-success" role="alert">                
-        Cadastrado com sucesso
+        <slot>Nome: <slot>
     </div>
 </template>
 

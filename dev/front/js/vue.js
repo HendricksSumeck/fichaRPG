@@ -40,7 +40,7 @@ Vue.component('alerta-sucesso', {
             local.alerta = true;
             setTimeout(function(){ 
               local.alerta = false; 
-            }, 5000);
+            }, 7000);
           }          
           //console.log(local.saida);
           //console.log(response);
