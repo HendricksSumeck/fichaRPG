@@ -45,6 +45,9 @@ Vue.component('alerta-invalido', {
         .then(function (response){
           local.saida = response.data;
           local.alUs = local.saida.erro.erroUsu;
+          if(!local.usuario){
+            local.alUs = 0;  
+          }
           //console.log(response);
         })
         .catch(function (error) {
@@ -61,6 +64,9 @@ Vue.component('alerta-invalido', {
         .then(function (response){
           local.saida = response.data;
           local.alEm = local.saida.erro.erroEma;
+          if(!local.email){
+            local.alEm = 0;  
+          }
           //console.log(response);
         })
         .catch(function (error) {
