@@ -5,12 +5,12 @@
         private $login;
         
         //Cadastro
-        public function verificaEmail(Cadastro $cadastro){
+        public function verificaEmail($email){
             require("../conexao/conexao.php");
             try{
                 $sql = "SELECT email FROM Login WHERE email = :email";
                 $select = $conexao->prepare($sql);
-                $select->bindValue(":email", $cadastro->getEmail());
+                $select->bindValue(":email", $email);
                 $select->execute();
                 $select = $select->fetch(PDO::FETCH_ASSOC);
                 return $select;
@@ -19,12 +19,12 @@
             }
         }
         
-        public function verificaUsuario(Cadastro $cadastro){
+        public function verificaUsuario($usuario){
             require("../conexao/conexao.php");
             try{
                 $sql = "SELECT usuario FROM Login WHERE usuario = :usuario";
                 $select = $conexao->prepare($sql);
-                $select->bindValue(":usuario", $cadastro->getUsuario());
+                $select->bindValue(":usuario", $usuario);
                 $select->execute();
                 $select = $select->fetch(PDO::FETCH_ASSOC);
                 return $select;
@@ -42,9 +42,9 @@
                 $select->bindValue(":usuario", $cadastro->getUsuario());
                 $select->bindValue(":senha", $cadastro->getSenha());
                 $select->execute(); 
-                return 3;
+                return 1;
             }catch(PDOException $erro){
-                return 4;
+                return 2;
             }   
         }
         

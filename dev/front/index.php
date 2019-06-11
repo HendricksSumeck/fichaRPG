@@ -5,7 +5,7 @@
 	<!--LINK CSS-->
     <link rel="stylesheet" type="text/css" media="screen" href="css/estilo.css"/>
 
-	<!--LINK DO BOOTSTRAP CSS-->
+    <!--LINK DO BOOTSTRAP CSS-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <!--SCRIPTS JS DO BOOTSTRAP -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -42,8 +42,12 @@
                             <form name="formCadastro" action="../back/sessoes/cadastrar.php" method="post">
                                 <div class="form-group">
                                     <label class="label_cadastro" for="nomeUsuario">Nome de usuário: </label>
-                                    <input type="text" v-model="usuario" id="nomeUsuario" class="form-control" placeholder="Dragon">
+                                    <alerta-valido v-if="alUs == 1"></alerta-valido>
+                                    <alerta-invalido v-if="alUs == 2"></alerta-invalido>
+                                    <input type="text" v-model="usuario" id="nomeUsuario" class="form-control" placeholder="Dragon">                                   
                                     <label class="label_cadastro" for="email">Email:</label>
+                                    <alerta-valido v-if="alEm == 1"></alerta-valido>
+                                    <alerta-invalido v-if="alEm == 2"></alerta-invalido>
                                     <input type="text" v-model="email" id="Cademail" class="form-control" placeholder="dragon5e@dragon.com">
                                     <label class="label_cadastro" for="senha">Senha:</label>
                                     <input type="password" v-model="senha" id="senha" class="form-control" placeholder="Informe sua senha">
@@ -94,8 +98,17 @@
     </div>
 </template>
 
+<template id="alertaValido">
+    <img class="check" src="https://img.icons8.com/color/48/000000/ok.png">
+</template>
+
+<template id="alertaInvalido">
+    <img class="check" src="https://img.icons8.com/flat_round/48/000000/cancel.png">      
+</template>
+
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
 <script src="js/vue.js"></script>
 </body>
 </html>
