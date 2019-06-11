@@ -35,7 +35,14 @@ Vue.component('alerta-sucesso', {
         })
         .then(function (response){  
           local.saida = response.data;
+          //console.log(local.saida);
           if(local.saida.erro == 1){
+            console.log(local.saida.erro);
+          }
+          if(local.saida.erro == 2){
+            console.log(local.saida.erro);
+          }
+          if(local.saida.erro == 3){
             local.showModal = false;
             local.alerta = true;
             setTimeout(function(){ 

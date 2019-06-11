@@ -9,9 +9,24 @@
     
     $banco = new Banco();
     $cadastro = new Cadastro($data['usuario'], $data['senha'], $data['email']);
-    $erro = $banco->cadastrarUsuario($cadastro);
-    $data['erro'] = $erro;
     
+    $bdUs = $banco->verificaUsuario($cadastro);
+    $bdEm = $banco->verificaEmail($cadastro);
+
+    //Erro 1 usuario
+    if($usuario == $bdUs['usuario']){
+        $data['erro'] = 1;
+    }
+    //Erro 2 email
+    elseif($email == $bdEm['email']){
+        $data['erro'] = 2;
+    }
+    //3 tudo valido
+    else{
+        $erro = $banco->cadastrarUsuario($cadastro);
+        $data['erro'] = $erro;
+    }
+
     $status = json_encode($data);
     echo $status;
 ?>

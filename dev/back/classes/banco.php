@@ -5,13 +5,12 @@
         private $login;
         
         //Cadastro
-        public function verificaRegistro(Cadastro $cadastro){
-            require_once("../conexao/conexao.php");
+        public function verificaEmail(Cadastro $cadastro){
+            require("../conexao/conexao.php");
             try{
-                $sql = "SELECT email, usuario FROM Login WHERE email = :email OR usuario = :usuario";
+                $sql = "SELECT email FROM Login WHERE email = :email";
                 $select = $conexao->prepare($sql);
-                $select->bindValue(":email",$cadastro->getEmail());
-                $select->bindValue(":usuario",$cadastro->getUsuario());
+                $select->bindValue(":email", $cadastro->getEmail());
                 $select->execute();
                 $select = $select->fetch(PDO::FETCH_ASSOC);
                 return $select;
@@ -20,18 +19,32 @@
             }
         }
         
+        public function verificaUsuario(Cadastro $cadastro){
+            require("../conexao/conexao.php");
+            try{
+                $sql = "SELECT usuario FROM Login WHERE usuario = :usuario";
+                $select = $conexao->prepare($sql);
+                $select->bindValue(":usuario", $cadastro->getUsuario());
+                $select->execute();
+                $select = $select->fetch(PDO::FETCH_ASSOC);
+                return $select;
+            }catch(PDOException $erro){
+                return $erro;
+            }
+        }
+
         public function cadastrarUsuario(Cadastro $cadastro){
-            require_once("../conexao/conexao.php");
+            require("../conexao/conexao.php");
             try{
                 $sql= "INSERT INTO `login`(`email`, `usuario`, `senha`) VALUES (:email, :usuario, :senha)";
-                $inserir = $pdo->prepare($sql);
-                $inserir->bindValue(":email", $cadastro->getEmail());
-                $inserir->bindValue(":usuario", $cadastro->getUsuario());
-                $inserir->bindValue(":senha", $cadastro->getSenha());
-                $inserir->execute(); 
-                return 1;
+                $select = $conexao->prepare($sql);
+                $select->bindValue(":email", $cadastro->getEmail());
+                $select->bindValue(":usuario", $cadastro->getUsuario());
+                $select->bindValue(":senha", $cadastro->getSenha());
+                $select->execute(); 
+                return 3;
             }catch(PDOException $erro){
-                return 2;
+                return 4;
             }   
         }
         
