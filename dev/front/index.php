@@ -52,7 +52,8 @@
                                     <label class="label_cadastro" for="senha">Senha:</label>
                                     <input type="password" v-model="senha" id="senha" class="form-control" placeholder="Informe sua senha">
                                     <label class="label_cadastro" for="confSenha">Confirmar senha:</label>
-                                    <input type="password" name="confSenha" id="" class="form-control" placeholder="Confirme sua senha">
+                                    <alerta-senha v-if="alSe == 2"></alerta-senha>
+                                    <input type="password" v-model="confSenha" id="" class="form-control" placeholder="Confirme sua senha">
                                 </div>
                                 <span @click="cadastrarUsuario" class="btn btn-danger">Confirmar</span>              
                             </form>
@@ -93,17 +94,27 @@
 </template>
 
 <template id="alertaSucesso">
-    <div class="alert alert-success" role="alert">                
-        <slot>Nome: <slot>
-    </div>
+    <transition name="fade">
+        <div class="alert alert-success" role="alert">                
+            <slot>Nome: <slot>
+        </div>
+    </transition>
 </template>
 
 <template id="alertaValido">
-    <img class="check" src="https://img.icons8.com/color/48/000000/ok.png">
+    <transition name="fade">
+        <img v-if class="check" src="https://img.icons8.com/color/48/000000/ok.png">
+    </transition>
 </template>
 
 <template id="alertaInvalido">
-    <img class="check" src="https://img.icons8.com/flat_round/48/000000/cancel.png">      
+    <transition name="fade">
+        <img class="check" src="https://img.icons8.com/flat_round/48/000000/cancel.png">   
+    </transition>   
+</template>
+
+<template id="senhaIncorreta">
+    <span class="label_cadastro">Senha incorreta</span>
 </template>
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

@@ -107,7 +107,7 @@ body {
     opacity: 0;
   }
   
-  .modal-leave-active {
+  .modal-leave-to {
     opacity: 0;
   }
   
@@ -115,4 +115,11 @@ body {
   .modal-leave-active .modal-container {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
+  }
+
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active em versões anteriores a 2.1.8 */ {
+    opacity: 0;
   }

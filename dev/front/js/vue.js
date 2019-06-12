@@ -14,6 +14,11 @@ Vue.component('alerta-invalido', {
   template: '#alertaInvalido'
 })
 
+Vue.component('alerta-senha', {
+  template: '#senhaIncorreta'
+})
+
+
   // start app
   new Vue({
     el: '#app',
@@ -21,6 +26,7 @@ Vue.component('alerta-invalido', {
     created() {
       this.debouncedGetusuario = _.debounce(this.getUsuario, 1000);
       this.debouncedGetemail = _.debounce(this.getEmail, 1000);
+      this.debouncedValidasenha = _.debounce(this.validaSenha, 1000);
     },
 
     data: {
@@ -28,9 +34,11 @@ Vue.component('alerta-invalido', {
       alerta: false,
       alUs: 0,
       alEm: 0,
+      alSe: 0,
       usuario: '',
       email: '',
       senha: '',
+      confSenha: '',
       saida: {},
       erro: {erroCad: '', erroUsu: '', erroEma: ''}
     },
@@ -74,6 +82,13 @@ Vue.component('alerta-invalido', {
         });
       },
 
+      validaSenha: function(){
+        if(this.senha != this.confSenha){
+          this.alSe = 2;
+        }else
+          this.alSe = 1;
+      },
+
       cadastrarUsuario: function(){
         var local = this;
         axios.post('../back/sessoes/cadastrar.php', {
@@ -92,6 +107,9 @@ Vue.component('alerta-invalido', {
             local.alerta = true;
             setTimeout(function(){ 
               local.alerta = false; 
+              local.usuario = "";
+              local.email = "";
+              local.senha = "";
             }, 5000);
           }          
           //console.log(local.saida);
@@ -110,6 +128,9 @@ Vue.component('alerta-invalido', {
       },
       email: function(){
         this.debouncedGetemail();
+      },
+      confSenha: function(){
+        this.debouncedValidasenha();
       }
     }
   })
