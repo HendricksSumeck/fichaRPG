@@ -40,7 +40,7 @@
                 $select = $conexao->prepare($sql);
                 $select->bindValue(":email", $cadastro->getEmail());
                 $select->bindValue(":usuario", $cadastro->getUsuario());
-                $select->bindValue(":senha", $cadastro->getSenha());
+                $select->bindValue(":senha", $cadastro->senhaHash($cadastro->getSenha()));
                 $select->execute(); 
                 return 1;
             }catch(PDOException $erro){
