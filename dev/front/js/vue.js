@@ -116,7 +116,7 @@ Vue.component('alerta-senha', {
           local.saida = response.data;
           //console.log(local.saida);
 
-          if(local.alUs == 1 && local.alEm == 1){
+          if(local.alertas.alUs == 1 && local.alertas.alEm == 1){
             local.showModal = false;
             local.alerta = true;
             setTimeout(function(){ 
@@ -124,6 +124,7 @@ Vue.component('alerta-senha', {
               local.usuario = "";
               local.email = "";
               local.senha = "";
+              local.confSenha = "";
             }, 5000);
           }          
           //console.log(local.saida);
