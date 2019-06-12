@@ -27,11 +27,13 @@ Vue.component('alerta-senha', {
       this.debouncedGetusuario = _.debounce(this.getUsuario, 1000);
       this.debouncedGetemail = _.debounce(this.getEmail, 1000);
       this.debouncedValidasenha = _.debounce(this.validaSenha, 1000);
+      this.debouncedValidaconfsenha = _.debounce(this.validaConfsenha, 1000);
     },
 
     data: {
       showModal: false,
       alerta: false,
+      alertas: {alUs: 0, alEm: 0, alSe: 0, alCose: 0},
       alUs: 0,
       alEm: 0,
       alSe: 0,
@@ -52,9 +54,9 @@ Vue.component('alerta-senha', {
         })
         .then(function (response){
           local.saida = response.data;
-          local.alUs = local.saida.erro.erroUsu;
+          local.alertas.alUs = local.saida.erro.erroUsu;
           if(!local.usuario){
-            local.alUs = 0;  
+            local.alertas.alUs = 0;  
           }
           //console.log(response);
         })
@@ -71,9 +73,9 @@ Vue.component('alerta-senha', {
         })
         .then(function (response){
           local.saida = response.data;
-          local.alEm = local.saida.erro.erroEma;
+          local.alertas.alEm = local.saida.erro.erroEma;
           if(!local.email){
-            local.alEm = 0;  
+            local.alertas.alEm = 0;  
           }
           //console.log(response);
         })
@@ -83,10 +85,22 @@ Vue.component('alerta-senha', {
       },
 
       validaSenha: function(){
-        if(this.senha != this.confSenha){
-          this.alSe = 2;
+        if(!this.senha){
+          this.alertas.alSe = 3;
+        }
+        else if(this.senha.length < 8){
+          this.alertas.alSe = 2;
         }else
-          this.alSe = 1;
+          this.alertas.alSe = 1;   
+      },
+
+      validaConfsenha: function(){
+        if(!this.senha | !this.confSenha){
+          this.alertas.alCose = 3;
+        }else if(this.senha != this.confSenha){
+          this.alertas.alCose = 2;
+        }else
+          this.alertas.alCose = 1;
       },
 
       cadastrarUsuario: function(){
@@ -129,8 +143,12 @@ Vue.component('alerta-senha', {
       email: function(){
         this.debouncedGetemail();
       },
-      confSenha: function(){
+      senha: function(){
         this.debouncedValidasenha();
+        this.debouncedValidaconfsenha();        
+      },
+      confSenha: function(){
+        this.debouncedValidaconfsenha();
       }
     }
   })

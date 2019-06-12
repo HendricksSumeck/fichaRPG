@@ -42,17 +42,18 @@
                             <form name="formCadastro" action="../back/sessoes/cadastrar.php" method="post">
                                 <div class="form-group">
                                     <label class="label_cadastro" for="nomeUsuario">Nome de usuário: </label>
-                                    <alerta-valido v-if="alUs == 1"></alerta-valido>
-                                    <alerta-invalido v-if="alUs == 2"></alerta-invalido>
+                                    <alerta-valido v-if="alertas.alUs == 1"></alerta-valido>
+                                    <alerta-invalido v-if="alertas.alUs == 2"></alerta-invalido>
                                     <input type="text" v-model="usuario" id="nomeUsuario" class="form-control" placeholder="Dragon">                                   
                                     <label class="label_cadastro" for="email">Email:</label>
-                                    <alerta-valido v-if="alEm == 1"></alerta-valido>
-                                    <alerta-invalido v-if="alEm == 2"></alerta-invalido>
+                                    <alerta-valido v-if="alertas.alEm == 1"></alerta-valido>
+                                    <alerta-invalido v-if="alertas.alEm == 2"></alerta-invalido>
                                     <input type="text" v-model="email" id="Cademail" class="form-control" placeholder="dragon5e@dragon.com">
                                     <label class="label_cadastro" for="senha">Senha:</label>
+                                    <alerta-senha v-if="alertas.alSe == 2">Senha muito pequena</alerta-senha>                                    
                                     <input type="password" v-model="senha" id="senha" class="form-control" placeholder="Informe sua senha">
                                     <label class="label_cadastro" for="confSenha">Confirmar senha:</label>
-                                    <alerta-senha v-if="alSe == 2"></alerta-senha>
+                                    <alerta-senha v-if="alertas.alCose == 2">Senha incorreta</alerta-senha>
                                     <input type="password" v-model="confSenha" id="" class="form-control" placeholder="Confirme sua senha">
                                 </div>
                                 <span @click="cadastrarUsuario" class="btn btn-danger">Confirmar</span>              
@@ -114,7 +115,13 @@
 </template>
 
 <template id="senhaIncorreta">
-    <span class="label_cadastro">Senha incorreta</span>
+    <transition name="fade">
+        <span class="label_cadastro">
+            <slot>
+                Senha
+            </slot>
+        </span>
+    </transition>
 </template>
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
