@@ -56,7 +56,7 @@
                                     <alerta-senha v-if="alertas.alCose == 2">Senha incorreta</alerta-senha>
                                     <input type="password" v-model="confSenha" id="" class="form-control" placeholder="Confirme sua senha">
                                 </div>
-                                <span @click="cadastrarUsuario" class="btn btn-danger">Confirmar</span>              
+                                <button @click="cadastrarUsuario" :disabled='validacao' class="btn btn-danger">Confirmar</button>              
                             </form>
                         </div>
                 </modal>

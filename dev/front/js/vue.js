@@ -28,6 +28,7 @@ Vue.component('alerta-senha', {
       this.debouncedGetemail = _.debounce(this.getEmail, 1000);
       this.debouncedValidasenha = _.debounce(this.validaSenha, 1000);
       this.debouncedValidaconfsenha = _.debounce(this.validaConfsenha, 1000);
+      this.debouncedHabilitabotao = _.debounce(this.habilitaBotao, 1100);
     },
 
     data: {
@@ -37,6 +38,7 @@ Vue.component('alerta-senha', {
       alUs: 0,
       alEm: 0,
       alSe: 0,
+      validacao: true,
       usuario: '',
       email: '',
       senha: '',
@@ -46,6 +48,14 @@ Vue.component('alerta-senha', {
     },
 
     methods: {
+      habilitaBotao: function(){
+        if(this.alertas.alUs == 1 && this.alertas.alEm == 1 &&  this.alertas.alSe == 1 &&  this.alertas.alCose == 1){
+          this.validacao = false;
+          console.log('Teste');
+        }else{
+          this.validacao = true;
+        }
+      },
       getUsuario: function(){
         var local = this;
         axios.post('../back/sessoes/verificaUsuario.php', {
@@ -56,7 +66,7 @@ Vue.component('alerta-senha', {
           local.saida = response.data;
           local.alertas.alUs = local.saida.erro.erroUsu;
           if(!local.usuario){
-            local.alertas.alUs = 0;  
+            local.alertas.alUs = 3;  
           }
           //console.log(response);
         })
@@ -75,7 +85,7 @@ Vue.component('alerta-senha', {
           local.saida = response.data;
           local.alertas.alEm = local.saida.erro.erroEma;
           if(!local.email){
-            local.alertas.alEm = 0;  
+            local.alertas.alEm = 3;  
           }
           //console.log(response);
         })
@@ -116,17 +126,16 @@ Vue.component('alerta-senha', {
           local.saida = response.data;
           //console.log(local.saida);
 
-          if(local.alertas.alUs == 1 && local.alertas.alEm == 1){
-            local.showModal = false;
-            local.alerta = true;
-            setTimeout(function(){ 
-              local.alerta = false; 
-              local.usuario = "";
-              local.email = "";
-              local.senha = "";
-              local.confSenha = "";
-            }, 5000);
-          }          
+          local.showModal = false;
+          local.alerta = true;
+          setTimeout(function(){ 
+            local.alerta = false; 
+            local.usuario = "";
+            local.email = "";
+            local.senha = "";
+            local.confSenha = "";
+          }, 5000);
+       
           //console.log(local.saida);
           //console.log(response);
         })
@@ -140,16 +149,20 @@ Vue.component('alerta-senha', {
     watch: {
       usuario: function() {
         this.debouncedGetusuario();
+        this.debouncedHabilitabotao();
       },
       email: function(){
         this.debouncedGetemail();
+        this.debouncedHabilitabotao();
       },
       senha: function(){
         this.debouncedValidasenha();
-        this.debouncedValidaconfsenha();        
+        this.debouncedValidaconfsenha();    
+        this.debouncedHabilitabotao();    
       },
       confSenha: function(){
         this.debouncedValidaconfsenha();
+        this.debouncedHabilitabotao();
       }
     }
   })
