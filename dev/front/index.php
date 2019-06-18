@@ -21,12 +21,12 @@
             <form id="login">
               <div class="form-group">
                 <label for="email">Email:</label>
-                <input class="tamanho_div" type="email" class="form-control">
+                <input class="tamanho_div" type="email" class="form-control" value="email">
               </div>
 
               <div class="form-group">
                 <label for="pwd">Senha:</label>
-                <input class="tamanho_div" type="password" class="form-control">
+                <input class="tamanho_div" type="password" class="form-control" value="senha">
               </div>
 
             <span class="btn btn-danger">Entrar</span>  
