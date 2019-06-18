@@ -53,8 +53,8 @@
             try{
                 $sql = "SELECT id_login, email FROM login WHERE email = :email AND senha = :senha";
                 $select = $conexao->prepare($sql);
-                $select->bindValue(":email",$login->getEmail());
-                $select->bindValue(":senha",$login->getSenha());
+                $select->bindValue(":email", $login->getEmail());
+                $select->bindValue(":senha", $login->getSenha());
                 $select->execute();
                 $select = $select->fetch(PDO::FETCH_ASSOC);
                 return $select;
