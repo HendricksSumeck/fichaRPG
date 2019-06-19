@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,19 +18,18 @@
 <div class="container" id="containerLogin">
     <div class="row">
         <div class="col-md-3" id="app">
-            <form id="login" method="post">
+            <form id="login">
               <div class="form-group">
                 <label for="email">Email:</label>
-                <input class="tamanho_div" type="email" class="form-control" id="email" name="email">
+                <input v-model="emailLog" class="tamanho_div" type="email" class="form-control">
               </div>
 
               <div class="form-group">
                 <label for="pwd">Senha:</label>
-                <input class="tamanho_div" type="password" class="form-control" id="senha" name="senha">
+                <input v-model="senhaLog" class="tamanho_div" type="password" class="form-control">
               </div>
 
-            <input type="submit" name="logar" class="btn btn-danger" id="btEntrar" value="Entrar"> 
-                
+            <span @click="loginUsuario" class="btn btn-danger">Entrar</span>  
             <span class="btn btn-danger" id="show-modal" @click="showModal = true">Cadastrar</span>
             <alerta-sucesso v-if="alerta" class="tamanho_div2">
                 {{usuario}}: Cadastrado com sucesso
@@ -41,7 +39,7 @@
                 <modal v-if="showModal" @close="showModal = false">
                         <h3 slot="header">Cadastro de usuario</h3>
                         <div slot="body">
-                            <form name="formCadastro" action="../back/sessoes/cadastrar.php" method="post">
+                            <form name="formCadastro"method="post">
                                 <div class="form-group">
                                     <label class="label_cadastro" for="nomeUsuario">Nome de usuário: </label>
                                     <alerta-valido v-if="alertas.alUs == 1"></alerta-valido>
@@ -58,7 +56,8 @@
                                     <alerta-senha v-if="alertas.alCose == 2">Senha incorreta</alerta-senha>
                                     <input type="password" v-model="confSenha" id="" class="form-control" placeholder="Confirme sua senha">
                                 </div>
-                                <button @click="cadastrarUsuario" :disabled='validacao' class="btn btn-danger">Confirmar</button>              
+                                <span id="desativado" v-if='validacao' class="btn btn-danger">Confirmar</span>              
+                                <span @click="cadastrarUsuario" v-if='!validacao' class="btn btn-success">Confirmar</span>              
                             </form>
                         </div>
                 </modal>
@@ -99,7 +98,7 @@
 <template id="alertaSucesso">
     <transition name="fade">
         <div class="alert alert-success" role="alert">                
-            <slot>Nome: </slot>
+            <slot>Nome: <slot>
         </div>
     </transition>
 </template>

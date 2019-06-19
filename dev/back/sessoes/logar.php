@@ -15,8 +15,10 @@ session_start();
         $email = trim(strip_tags($_POST['email']));
         $senha = trim(strip_tags($_POST['senha']));
         
-        $banco->verificaLogin($email, $senha);
+        $resultado = $banco->verificaLogin($email, $senha);
     }
     
+    $status = json_encode($data);
+    echo $status;
     
 ?>

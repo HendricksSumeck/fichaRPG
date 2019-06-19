@@ -66,7 +66,7 @@
                     header("refresh: 1, ../../front/inicio.php");
                     exit; 
                 }else{
-                    echo 'os dados estao incorretos'
+                    echo('os dados estao incorretos');
                 }
                 
             }catch(PDOException $e){

@@ -44,7 +44,9 @@ Vue.component('alerta-senha', {
       senha: '',
       confSenha: '',
       saida: {},
-      erro: {erroCad: '', erroUsu: '', erroEma: ''}
+      erro: {erroCad: '', erroUsu: '', erroEma: ''},
+      emailLog: '',
+      senhaLog: ''
     },
 
     methods: {
@@ -117,8 +119,8 @@ Vue.component('alerta-senha', {
         var local = this;
         axios.post('../back/sessoes/cadastrar.php', {
           usuario: this.usuario,
-          email: this.email,
-          senha: this.senha,
+          emailLog: this.email,
+          senhaLog: this.senha,
           erro: this.erro
         })
 
@@ -138,6 +140,25 @@ Vue.component('alerta-senha', {
        
           //console.log(local.saida);
           //console.log(response);
+        })
+
+        .catch(function (error) {
+          console.log(error);
+        });
+      },
+
+      loginUsuario: function(){
+        var local = this;
+        axios.post('../back/sessoes/logar.php', {
+          email: this.email,
+          senha: this.senha,
+          erro: this.erro
+        })
+
+        .then(function (response){  
+          local.saida = response.data;
+          console.log(local.saida);
+
         })
 
         .catch(function (error) {
