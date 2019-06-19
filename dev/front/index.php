@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,18 +19,19 @@
 <div class="container" id="containerLogin">
     <div class="row">
         <div class="col-md-3" id="app">
-            <form id="login">
+            <form id="login" method="post">
               <div class="form-group">
                 <label for="email">Email:</label>
-                <input class="tamanho_div" type="email" class="form-control" value="email">
+                <input class="tamanho_div" type="email" class="form-control" id="email" name="email">
               </div>
 
               <div class="form-group">
                 <label for="pwd">Senha:</label>
-                <input class="tamanho_div" type="password" class="form-control" value="senha">
+                <input class="tamanho_div" type="password" class="form-control" id="senha" name="senha">
               </div>
 
-            <span class="btn btn-danger">Entrar</span>  
+            <input type="submit" name="logar" class="btn btn-danger" id="btEntrar" value="Entrar"> 
+                
             <span class="btn btn-danger" id="show-modal" @click="showModal = true">Cadastrar</span>
             <alerta-sucesso v-if="alerta" class="tamanho_div2">
                 {{usuario}}: Cadastrado com sucesso
@@ -97,7 +99,7 @@
 <template id="alertaSucesso">
     <transition name="fade">
         <div class="alert alert-success" role="alert">                
-            <slot>Nome: <slot>
+            <slot>Nome: </slot>
         </div>
     </transition>
 </template>

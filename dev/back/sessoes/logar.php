@@ -1,12 +1,22 @@
 <?php
-    require_once("../classes/banco.php");
-    require_once("../classes/cadastro.php");
-    $data = json_decode(file_get_contents("php://input"), true);
-    
-    $email = $data["email"];
-    $senha = $data["senha"];
+ob_start();
+session_start();
 
+    require_once("../../front/index.php");
+    //require("../../back/classes/banco.php")
+    
     $banco = new Banco();
-    $login = new Login($data['email'], $data['senha']);
+    if(isset($_SESSION['usuariolog']) && (isset($_SESSION['senhalog']))){
+        header("location:index.php");
+        exit;
+    }
+
+    if(isset($_POST['logar'])){
+        $email = trim(strip_tags($_POST['email']));
+        $senha = trim(strip_tags($_POST['senha']));
+        
+        $banco->verificaLogin($email, $senha);
+    }
+    
     
 ?>

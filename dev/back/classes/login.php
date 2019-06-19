@@ -8,7 +8,7 @@
         
         //Funções
             
-        public function login(){
+        /*public function login(){
             $banco = new Banco();
             $var = $banco->verificaLogin($this);
             if($var['email'] == NULL){
@@ -18,7 +18,7 @@
                 $this->setId_login($var['id_login']);
                 $this->logar();
             }
-        }
+        }*/
         
         public function logar(){
             $_SESSION['email'] = $this->email;
@@ -30,14 +30,6 @@
 
 
 
-
     }
-    
-    
-    
-    
-    
-    
-    
     
     ?>

@@ -48,16 +48,27 @@
             }   
         }
         
-        public function verificaLogin(Login $login){
+        public function verificaLogin($email, $senha){
             require("../conexao/conexao.php");
             try{
                 $sql = "SELECT id_login, email FROM login WHERE email = :email AND senha = :senha";
                 $select = $conexao->prepare($sql);
-                $select->bindValue(":email", $login->getEmail());
-                $select->bindValue(":senha", $login->getSenha());
+                $select->bindValue(":email", $email);
+                $select->bindValue(":senha", $senha);
                 $select->execute();
-                $select = $select->fetch(PDO::FETCH_ASSOC);
-                return $select;
+                //$select = $select->fetch(PDO::FETCH_ASSOC);
+                echo $contar = $select->rowCount();
+                if($contar > 0 ){
+                    $email = $_POST['email'];
+                    $senha = $_POST['senha'];
+                    $_SESSION['usuariolog'] = $email;
+                    $_SESSION['senhalog'] = $senha;
+                    header("refresh: 1, ../../front/inicio.php");
+                    exit; 
+                }else{
+                    echo 'os dados estao incorretos'
+                }
+                
             }catch(PDOException $e){
                 return $e;
             }
