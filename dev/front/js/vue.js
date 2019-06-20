@@ -158,7 +158,7 @@ Vue.component('alerta-senha', {
         .then(function (response){  
           local.saida = response.data;
           console.log(local.saida);
-
+          //window.location.assign("inicio.php");
         })
 
         .catch(function (error) {
