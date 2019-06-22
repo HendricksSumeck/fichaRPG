@@ -88,11 +88,13 @@
      </div>
 
      <div class="form-group col-md-3">
-      <label for="campo3">Inspiração</label><br>
-      <input type="text" class="form-control col-md-5" id="campo3">
-      <div class="form-group">
+      <div class="form-group col-md-6">
+        <label for="campo3">Inspiração</label><br>
+        <input type="text" class="form-control" id="campo3">
+      </div>
+      <div class="form-group col-md-6">
         <label for="campo2">Bônus de proficiencia</label>
-        <input type="text" class="form-control col-md-3" id="campo3">
+        <input type="text" class="form-control" id="campo3">
       </div>
       <table class="table">
             <thead>
@@ -134,46 +136,54 @@
      </div>
    
     <div class="form-group col-md-4">
+    <div class="row"> 
       <div class="col-md-4"> 
         <label for="campo1">Classe ARMD</label><br>
-        <input type="text" class="form-control col-md-5 offset-sm-1" id="campo1">
+        <input type="text" class="form-control" id="campo1">
       </div>
       <div class="col-md-4">
         <label for="campo1">Iniciativa</label><br>
-        <input type="text" class="form-control col-md-5" id="campo1">
+        <input type="text" class="form-control" id="campo1">
       </div>
       <div class="col-md-4">
         <label for="campo1">Desloc.</label><br>
-        <input type="text" class="form-control col-md-4" id="campo1">
+        <input type="text" class="form-control" id="campo1">
       </div>
-
+    </div>
+    <div class="row"> 
+    <div class="offset-md-4 col-md-4"> 
           <label>PV totais</label>
           <input type="text" class="form-control">
-
+    </div> 
+    <div class=""> 
         <label for="campo3">Pontos de vida atuais</label>
         <input type="text" class="form-control" id="campo3">
-
+    </div> 
+    </div>
+      <div class=""> 
+          <label for="campo3">Pontos de vida temporarios</label>
+          <input type="text" class="form-control" id="campo3">
+      </div>
     </div>
     
    
     <div class="col-md-3">
       <div>
-        <label for="campo1" style="">Traços de personalidade</label>
         <textarea class="form-control" name="personalidade" id="mensagem" cols="50" rows="3"></textarea>
+        <label class="text-center" for="campo1" style="">Traços de personalidade</label>
       </div>
       <div>
-        <label for="campo1" style="">Ideais</label>
        <textarea class="form-control" name="personalidade" id="mensagem" cols="50" rows="3"></textarea>
+       <label class="text-center" for="campo1" style="">Ideais</label>
       </div>
       <div>
-        <label for="campo1" style="">Ligações</label>
        <textarea class="form-control" name="personalidade" id="mensagem" cols="50" rows="3"></textarea>
+       <label for="campo1" style="">Ligações</label>
       </div>
       <div>
-        <label for="campo1" style="">Defeitos</label>
        <textarea class="form-control" name="personalidade" id="mensagem" cols="50" rows="3"></textarea>
+       <label for="campo1" style="">Defeitos</label>
       </div>
-     </div>
     </div>
 
 
