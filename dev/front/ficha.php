@@ -122,12 +122,42 @@
         
     </div>
 
-
-
-
-    <div class="row">
-  
-
+    <div class="row col-md-3">
+        <table class="table">
+          <tbody>
+            <tr>
+              <th scope="row"><input type="radio"></th>
+              <td><input type="text" class="form-control col-md-1"></td>
+              <td>Força</td>
+            </tr>
+            <tr>
+              <th scope="row"><input type="radio"></th>
+              <td><input type="text" class="form-control col-md-1"></td>
+              <td>Destreza</td>
+            </tr>
+            <tr>
+              <th scope="row"><input type="radio"></th>
+              <td><input type="text" class="form-control col-md-1"></td>
+              <td>Constituição</td>
+            </tr>
+             <tr>
+              <th scope="row"><input type="radio"></th>
+              <td><input type="text" class="form-control col-md-1"></td>
+              <td>Inteligência</td>
+            </tr>
+             <tr>
+              <th scope="row"><input type="radio"></th>
+              <td><input type="text" class="form-control col-md-1"></td>
+              <td>Sabedoria</td>
+            </tr>
+             <tr>
+              <th scope="row"><input type="radio"></th>
+              <td><input type="text" class="form-control col-md-1"></td>
+              <td>Carisma</td>
+            </tr>
+          </tbody>
+        </table>
+        
 
     </div>
 
