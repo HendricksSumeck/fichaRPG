@@ -122,37 +122,37 @@
         
     </div>
 
-    <div class="row col-md-3">
+    <div class="row col-md-4">
         <table class="table">
           <tbody>
             <tr>
               <th scope="row"><input type="radio"></th>
-              <td><input type="text" class="form-control col-md-1"></td>
+              <td><input type="text" class="form-control col-md-2"></td>
               <td>Força</td>
             </tr>
             <tr>
               <th scope="row"><input type="radio"></th>
-              <td><input type="text" class="form-control col-md-1"></td>
+              <td><input type="text" class="form-control col-md-2"></td>
               <td>Destreza</td>
             </tr>
             <tr>
               <th scope="row"><input type="radio"></th>
-              <td><input type="text" class="form-control col-md-1"></td>
+              <td><input type="text" class="form-control col-md-2"></td>
               <td>Constituição</td>
             </tr>
              <tr>
               <th scope="row"><input type="radio"></th>
-              <td><input type="text" class="form-control col-md-1"></td>
+              <td><input type="text" class="form-control col-md-2"></td>
               <td>Inteligência</td>
             </tr>
              <tr>
               <th scope="row"><input type="radio"></th>
-              <td><input type="text" class="form-control col-md-1"></td>
+              <td><input type="text" class="form-control col-md-2"></td>
               <td>Sabedoria</td>
             </tr>
              <tr>
               <th scope="row"><input type="radio"></th>
-              <td><input type="text" class="form-control col-md-1"></td>
+              <td><input type="text" class="form-control col-md-2"></td>
               <td>Carisma</td>
             </tr>
           </tbody>
