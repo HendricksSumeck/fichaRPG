@@ -172,7 +172,46 @@
           </tbody>
         </table>
         
-
+    <div class="row col-md-4">
+            <table class="table">
+                <thead>
+                    <th scope="col">Testes de resistência</th>
+                </thead>
+              <tbody>
+                <tr>
+                  <th scope="row"><input type="radio"></th>
+                  <td><input type="text" class="form-control col-md-2"></td>
+                  <td>Força</td>
+                </tr>
+                <tr>
+                  <th scope="row"><input type="radio"></th>
+                  <td><input type="text" class="form-control col-md-2"></td>
+                  <td>Destreza</td>
+                </tr>
+                <tr>
+                  <th scope="row"><input type="radio"></th>
+                  <td><input type="text" class="form-control col-md-2"></td>
+                  <td>Constituição</td>
+                </tr>
+                 <tr>
+                  <th scope="row"><input type="radio"></th>
+                  <td><input type="text" class="form-control col-md-2"></td>
+                  <td>Inteligência</td>
+                </tr>
+                 <tr>
+                  <th scope="row"><input type="radio"></th>
+                  <td><input type="text" class="form-control col-md-2"></td>
+                  <td>Sabedoria</td>
+                </tr>
+                 <tr>
+                  <th scope="row"><input type="radio"></th>
+                  <td><input type="text" class="form-control col-md-2"></td>
+                  <td>Carisma</td>
+                </tr>
+              </tbody>
+            </table>
+         </div>
+         
     </div>
     </div>
     
