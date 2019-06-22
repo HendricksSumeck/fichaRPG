@@ -22,9 +22,13 @@ body {
  }
  
  nav{
-     background-color:#8B0000;
-     background-size: 100px;
+     background-color:   #333333;
+     background-size: 90px;
  }
+
+ #logo {
+
+}
 
 
 #entrar{
@@ -45,6 +49,7 @@ body {
   height: 25px;
   width: 25px;
 }
+
 
 #containerLogin{
     margin-top: 300px;
