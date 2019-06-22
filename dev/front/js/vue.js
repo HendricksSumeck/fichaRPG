@@ -28,7 +28,7 @@ Vue.component('alerta-senha', {
       this.debouncedGetemail = _.debounce(this.getEmail, 1000);
       this.debouncedValidasenha = _.debounce(this.validaSenha, 1000);
       this.debouncedValidaconfsenha = _.debounce(this.validaConfsenha, 1000);
-      this.debouncedHabilitabotao = _.debounce(this.habilitaBotao, 1100);
+      this.debouncedHabilitabotao = _.debounce(this.habilitaBotao, 1000);
     },
 
     data: {
@@ -53,7 +53,6 @@ Vue.component('alerta-senha', {
       habilitaBotao: function(){
         if(this.alertas.alUs == 1 && this.alertas.alEm == 1 &&  this.alertas.alSe == 1 &&  this.alertas.alCose == 1){
           this.validacao = false;
-          console.log('Teste');
         }else{
           this.validacao = true;
         }
