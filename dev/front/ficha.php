@@ -59,7 +59,7 @@
 
  
     <div class="row">
-     <div class="form-group col-sm-1">
+     <div class="form-group col-sm-2">
          <label for="campo2">Força</label><br>
          <input type="text" class="form-control col-md-3 offset-md-1" id="campo3"><br><br>
          <label>Pontos</label>
@@ -85,7 +85,7 @@
        <input type="text" class="form-control col-md-4" id="campo1">
      </div>
         
-    <div class="form-group col-md-3">
+    <div class="form-group col-md-2">
        <label for="campo1" style="">Traços de personalidade</label>
        <textarea class="form-control" name="personalidade" id="mensagem" cols="50" rows="3"></textarea>
      </div>
@@ -94,7 +94,7 @@
 
 
     <div class="row">
-     <div class="form-group col-sm-1">
+     <div class="form-group col-sm-2">
          <label for="campo2">Destreza</label><br>
          <input type="text" class="form-control col-md-3 offset-md-1" id="campo3"><br><br>
          <label>Pontos</label>
@@ -102,7 +102,7 @@
 
      <div class="form-group col-md-2 ">
        <label for="campo2">Bônus de proficiencia</label>
-       <input type="text" class="form-control col-md-2" id="campo3">
+       <input type="text" class="form-control col-md-3" id="campo3">
      </div>
 
      <div class="form-group col-md-2">
@@ -113,17 +113,31 @@
             <input type="text" class="form-control col-md-2">
          </div>
      </div>
-        
-    
-    <div class="form-group col-md-3">
+         <div class="form-group col-md-3">
        <label for="campo1" style="">Ideais</label>
        <textarea class="form-control" name="personalidade" id="mensagem" cols="50" rows="3"></textarea>
      </div>
         
+    <div class="form-group col-md-3">
+       <label for="campo1" style="">Ligações</label>
+       <textarea class="form-control" name="personalidade" id="mensagem" cols="50" rows="3"></textarea>
+     </div>
     </div>
-
-    <div class="row col-md-4">
+    
+    <div class="row">
+        
+         <div class="form-group col-sm-2">
+             <label for="campo2">Constituição</label><br>
+             <input type="text" class="form-control col-md-3 offset-md-1" id="campo3"><br><br>
+             <label class="offset-md-1">Pontos</label>
+        </div>
+        
+    
+     <div class="col-md-4">
         <table class="table">
+            <thead>
+                <th scope="col">Testes de resistência</th>
+            </thead>
           <tbody>
             <tr>
               <th scope="row"><input type="radio"></th>
@@ -160,9 +174,35 @@
         
 
     </div>
-
-
     </div>
+    
+    <div class="row">
+        <div class="form-group col-sm-2">
+             <label for="campo2">Inteligencia</label><br>
+             <input type="text" class="form-control col-md-3 offset-md-1" id="campo3"><br><br>
+             <label class="offset-md-1">Pontos</label>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="form-group col-sm-2">
+             <label for="campo2">Sabedoria</label><br>
+             <input type="text" class="form-control col-md-3 offset-md-1" id="campo3"><br><br>
+             <label class="offset-md-1">Pontos</label>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="form-group col-sm-2">
+             <label for="campo2">Carisma</label><br>
+             <input type="text" class="form-control col-md-3 offset-md-1" id="campo3"><br><br>
+             <label class="offset-md-1">Pontos</label>
+        </div>
+    </div>
+    
+    
+
+    </div><!-- fecha o container-->
 
 
 
