@@ -12,6 +12,7 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
 </head>
 
@@ -44,16 +45,17 @@
         <div class="logo">
             <a href="inicio"><img id="logo" src="front/img/logo.png"></a>
         </div>
-        <div id="entrar" class=" pt-2">
+        <div id="sair" class=" pt-2">
             <a href="/web/Novapasta/fichaRPG/dev/front/index/"><button class="btn btn-outline-dark ">Sair</button></a>
         </div>
     </nav>
 
   <div class="col-sm-12 row py-4 ">
 
-    <div class="col-lg-8 py-5 offset-2 row">
-      <div class="pt-5">
-        <button type="button" class="btn btn-secondary btn-lg text-center ">Adicionar ficha</button>
+    <div class="col-lg-12 py-5 offset-2 row">
+      <div class="pt-5 pr-5">
+      <div class="pt-5 pr-5">
+        <button type="button"  data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" class="col-lg-4 far fa-plus-square btn btn-secondary btn-lg"> </button>
       </div>
 
       <div class="pl-4">
