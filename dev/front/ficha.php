@@ -85,6 +85,101 @@
          <input type="text" class="form-control col-md-3 offset-md-1" id="campo3"><br><br>
          <label>Pontos</label>
       </div>
+         
+        <div class="row">
+            <table class="table">
+            <thead>
+                <th scope="col">Testes de resistência</th>
+            </thead>
+          <tbody>
+            <tr>
+              <th scope="row"><input type="radio"></th>
+              <td><input type="text" class="form-control col-md-2"></td>
+              <td>Acrobacia</td>
+            </tr>
+            <tr>
+              <th scope="row"><input type="radio"></th>
+              <td><input type="text" class="form-control col-md-2"></td>
+              <td>Arcanismo</td>
+            </tr>
+            <tr>
+              <th scope="row"><input type="radio"></th>
+              <td><input type="text" class="form-control col-md-2"></td>
+              <td>Atletismo</td>
+            </tr>
+             <tr>
+              <th scope="row"><input type="radio"></th>
+              <td><input type="text" class="form-control col-md-2"></td>
+              <td>Atuação</td>
+            </tr>
+             <tr>
+              <th scope="row"><input type="radio"></th>
+              <td><input type="text" class="form-control col-md-2"></td>
+              <td>Blefar</td>
+            </tr>
+             <tr>
+              <th scope="row"><input type="radio"></th>
+              <td><input type="text" class="form-control col-md-2"></td>
+              <td>História</td>
+            </tr>
+            <tr>
+              <th scope="row"><input type="radio"></th>
+              <td><input type="text" class="form-control col-md-2"></td>
+              <td>Intimidação</td>
+            </tr>
+            <tr>
+              <th scope="row"><input type="radio"></th>
+              <td><input type="text" class="form-control col-md-2"></td>
+              <td>Intuição</td>
+            </tr>
+            <tr>
+              <th scope="row"><input type="radio"></th>
+              <td><input type="text" class="form-control col-md-2"></td>
+              <td>Investigação</td>
+            </tr>
+            <tr>
+              <th scope="row"><input type="radio"></th>
+              <td><input type="text" class="form-control col-md-2"></td>
+              <td>Lidar com animais</td>
+            </tr>
+            <tr>
+              <th scope="row"><input type="radio"></th>
+              <td><input type="text" class="form-control col-md-2"></td>
+              <td>Medicina</td>
+            </tr>
+            <tr>
+              <th scope="row"><input type="radio"></th>
+              <td><input type="text" class="form-control col-md-2"></td>
+              <td>Natureza</td>
+            </tr>
+            <tr>
+              <th scope="row"><input type="radio"></th>
+              <td><input type="text" class="form-control col-md-2"></td>
+              <td>Percepção</td>
+            </tr>
+            <tr>
+              <th scope="row"><input type="radio"></th>
+              <td><input type="text" class="form-control col-md-2"></td>
+              <td>Persuasão</td>
+            </tr>
+            <tr>
+              <th scope="row"><input type="radio"></th>
+              <td><input type="text" class="form-control col-md-2"></td>
+              <td>Prestidigitação</td>
+            </tr>
+            <tr>
+              <th scope="row"><input type="radio"></th>
+              <td><input type="text" class="form-control col-md-2"></td>
+              <td>Religião</td>
+            </tr>
+            <tr>
+              <th scope="row"><input type="radio"></th>
+              <td><input type="text" class="form-control col-md-2"></td>
+              <td>Sobrevivencia</td>
+            </tr>
+          </tbody>
+        </table> 
+        </div>
      </div>
 
      <div class="form-group col-md-3">
@@ -133,6 +228,7 @@
             </tr>
           </tbody>
         </table>
+        
      </div>
    
     <div class="form-group col-md-4">
@@ -188,7 +284,7 @@
 
 
 
-      
+    </div>
     </div><!-- fecha o container-->
 
 
