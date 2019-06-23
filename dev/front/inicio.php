@@ -41,7 +41,7 @@
     <a class="navbar-brand" href="bodyini"></a>
   </nav>-->
 
-  <nav class="nav navbar-expand-lg justify-content-between d-flex" id="">
+  <nav class="nav navbar-expand-lg justify-content-between d-flex" id="nav">
         <div class="logo">
             <a href="inicio"><img id="logo" src="front/img/logo.png"></a>
         </div>
@@ -50,17 +50,18 @@
         </div>
     </nav>
 
-  <div class="col-sm-12 row py-4 ">
+  <div class="col-sm-12 row py-2 pt-5">
 
-    <div class="col-lg-12 py-5 offset-2 row">
-      <div class="pt-5 pr-5">
-      <div class="pt-5 pr-5">
-        <button type="button"  data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" class="col-lg-4 far fa-plus-square btn btn-secondary btn-lg"> </button>
+    <div class="col-lg-10 py-2 offset-2 pl-3 row" >
+      <div class="pt-5">
+      <div class="pt-5 col-lg-2">
+      <a href="../Novapasta/fichaRPG/dev/front/ficha/"><button type="button"  data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" class=" far fa-plus-square btn btn-secondary btn-lg"> </button></a>
+      </div>
       </div>
 
-      <div class="pl-4">
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="../front/img/lucasbolas.png " alt="Card image cap"width="200px" height="200px">
+      <div class="pl-4 col-lg-3">
+        <div class="card " style="width: 18rem;">
+          <img class="card-img-top" src="../front/img/lucasbolas.png " alt="Card image cap" width="200px" height="200px">
           <div class=" card-body">
             <h5 class="card-title text-center">Lucas3bolas</h5>
             <a href="#" class="btn btn-primary col-sm-12">Visualizar ficha</a>
@@ -68,15 +69,15 @@
         </div>
       </div>
 
-      <div class="pl-4" >
+      <div class="pl-5 col-lg-2">
         <div class="card" style="width: 18rem;">
            <img class="card-img-top" src="../front/img/paladino.png" alt="Card image cap" width="200px" height="200px">
             <div class=" card-body">
               <h5 class="card-title text-center">Rubinho</h5>
               <a href="#" class="btn btn-primary col-sm-12">Visualizar ficha</a>
             </div>
-          </div>
         </div>
+      </div>
     </div>
   
 </body>
