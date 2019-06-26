@@ -64,17 +64,23 @@
           <img class="card-img-top" src="../front/img/lucasbolas.png " alt="Card image cap" width="200px" height="200px">
           <div class=" card-body">
             <h5 class="card-title text-center">Lucas3bolas</h5>
-            <a href="#" class="btn btn-primary col-sm-12">Visualizar ficha</a>
+            <div class="row">
+              <a href="#" class="btn btn-primary col-sm-10">Visualizar ficha</a>
+                <a href="#" class="btn btn-primary col-sm-2">X</a>
+                </div>
           </div>
         </div>
       </div>
 
       <div class="pl-5 col-lg-2">
-        <div class="card" style="width: 18rem;">
+          <div class="card" style="width: 18rem;">
            <img class="card-img-top" src="../front/img/paladino.png" alt="Card image cap" width="200px" height="200px">
             <div class=" card-body">
               <h5 class="card-title text-center">Rubinho</h5>
-              <a href="#" class="btn btn-primary col-sm-12">Visualizar ficha</a>
+                <div class="row">
+              <a href="#" class="btn btn-primary col-sm-10">Visualizar ficha</a>
+                <a href="#" class="btn btn-primary col-sm-2">X</a>
+                </div>
             </div>
         </div>
       </div>
