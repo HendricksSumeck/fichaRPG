@@ -16,43 +16,87 @@
     
 <body id="bodyficha">
 
-<div class="container pt-5">
-    <div class="row"> 
-      <div class="form-group col-md-6 pt-4">
-        <label for="campo1">Nome do personagem:</label>
-        <input type="text" class="form-control" id="campo1">
-      </div>
+<div class="container">
+    
+    <div class="row" id="parte1">
+            <div class="col-md-2">
+                <a href="#" id="img-perfil"><img class="card-img-top img-fluid" src="img/paladino.png" width="200px" height="200px" style="border-style: solid"></a>
+            </div>
+            
+            <div class="form-group col-md-2 pt-4">
+                <label for="campo1">Nome do personagem:</label>
+                <input type="text" class="form-control" id="campo1">
+             </div>
 
-      <div class="form-group col-md-2 pt-4">
-        <label for="campo2">Classe e nivel</label>
-        <input type="text" class="form-control" id="campo3">
-      </div>
+            <div class="form-group col-md-2 pt-4">
+                <label for="campo2">Classe e nivel</label>
+                <input type="text" class="form-control" id="campo3">
+            </div>
+            
+            <div class="form-group col-md-2 pt-4">
+                <label for="campo3">Antecedente</label>
+                <input type="text" class="form-control" id="campo3">
+            </div>
 
-      <div class="form-group col-md-2 pt-4">
-        <label for="campo3">Antecedente</label>
-        <input type="text" class="form-control" id="campo3">
-      </div>
-          
-      <div class="form-group col-md-2 pt-4">
-        <label for="campo1">Raça</label>
-        <input type="text" class="form-control" id="campo1">
-      </div>
-      
-      <div class="form-group col-md-2 pt-4">
-        <label for="campo1">Tendência</label>
-        <input type="text" class="form-control" id="campo1">
-      </div>
-          
-      <div class="form-group col-md-2 pt-4">
-        <label for="campo1">Pontos de experiência</label>
-        <input type="text" class="form-control" id="campo1">
-      </div>      
-    </div>
+            <div class="form-group col-md-2 pt-4">
+                <label for="campo1">Raça</label>
+                <input type="text" class="form-control" id="campo1">
+            </div>
+
+            <div class="form-group col-md-2 pt-4">
+                <label for="campo1">Tendência</label>
+                <input type="text" class="form-control" id="campo1">
+            </div>
+
+            <div class="form-group col-md-2 pt-4">
+                <label for="campo1">Pontos de xp</label>
+                <input type="text" class="form-control" id="campo1">
+            </div>
+            
+        </div>  
 
     <hr align="center" width="1200" size="2" color="white">
 
 <!--<input type="text" class="form-control" id="campo3">-->
 
+      <div class="row">
+     
+      <div class="form-group col-md-1">
+        <label for="campo3">Inspiração</label><br>
+        <input type="text" class="form-control " id="campo3">
+      </div>
+      <div class="form-group col-md-2">
+        <label for="campo2">Bônus de proficiencia</label>
+        <input type="text" class="form-control" id="campo3">
+      </div>
+
+      <div class="col-md-2"> 
+        <label for="campo1">Classe ARMD</label><br>
+        <input type="text" class="form-control" id="campo1">
+      </div>
+      <div class="col-md-2">
+        <label for="campo1">Iniciativa</label><br>
+        <input type="text" class="form-control" id="campo1">
+      </div>
+      <div class="col-md-2">
+        <label for="campo1">Desloc.</label><br>
+        <input type="text" class="form-control" id="campo1">
+      </div>
+    
+    <div class="col-md-2">
+        <div class="col-md-12"> 
+            <label for="campo3">PV atuais</label>
+            <input type="text" class="form-control" id="campo3">
+        </div> 
+   
+        <div class="col-md-12"> 
+            <label for="campo3">PV temporarios</label>
+            <input type="text" class="form-control" id="campo3">
+        </div>
+    </div>
+
+     </div>
+    
     <div class="row  pt-5">
      <div class="form-group col-md-2 pt-3">
       <div>
@@ -85,8 +129,51 @@
          <input type="text" class="form-control col-md-3 offset-md-1" id="campo3"><br><br>
          <label>Pontos</label>
       </div>
-         
-        <div class="row  pt-5">
+    </div>
+        
+        <div class="col-md-5">
+            <table class="table  pt-5">
+                <thead>
+                    <th scope="col">Testes de resistência</th>
+                </thead>
+              <tbody>
+                <tr>
+                  <th scope="row"><input type="radio"></th>
+                  <td><input type="text" class="form-control col-md-3"></td>
+                  <td>Força</td>
+                </tr>
+                <tr>
+                  <th scope="row"><input type="radio"></th>
+                  <td><input type="text" class="form-control col-md-3"></td>
+                  <td>Destreza</td>
+                </tr>
+                <tr>
+                  <th scope="row"><input type="radio"></th>
+                  <td><input type="text" class="form-control col-md-3"></td>
+                  <td>Constituição</td>
+                </tr>
+                 <tr>
+                  <th scope="row"><input type="radio"></th>
+                  <td><input type="text" class="form-control col-md-3"></td>
+                  <td>Inteligência</td>
+                </tr>
+                 <tr>
+                  <th scope="row"><input type="radio"></th>
+                  <td><input type="text" class="form-control col-md-3"></td>
+                  <td>Sabedoria</td>
+                </tr>
+                 <tr>
+                  <th scope="row"><input type="radio"></th>
+                  <td><input type="text" class="form-control col-md-3"></td>
+                  <td>Carisma</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>    
+        
+        
+</div>
+         <!--<div class="col-md-5">
             <table class="table">
             <thead>
                 <th scope="col">Testes de resistência</th>
@@ -94,173 +181,92 @@
           <tbody>
             <tr>
               <th scope="row"><input type="radio"></th>
-              <td><input type="text" class="form-control col-md-2"></td>
+              <td><input type="text" class="form-control col-md-3"></td>
               <td>Acrobacia</td>
             </tr>
             <tr>
               <th scope="row"><input type="radio"></th>
-              <td><input type="text" class="form-control col-md-2"></td>
+              <td><input type="text" class="form-control col-md-3"></td>
               <td>Arcanismo</td>
             </tr>
             <tr>
               <th scope="row"><input type="radio"></th>
-              <td><input type="text" class="form-control col-md-2"></td>
+              <td><input type="text" class="form-control col-md-3"></td>
               <td>Atletismo</td>
             </tr>
              <tr>
               <th scope="row"><input type="radio"></th>
-              <td><input type="text" class="form-control col-md-2"></td>
+              <td><input type="text" class="form-control col-md-3"></td>
               <td>Atuação</td>
             </tr>
              <tr>
               <th scope="row"><input type="radio"></th>
-              <td><input type="text" class="form-control col-md-2"></td>
+              <td><input type="text" class="form-control col-md-3"></td>
               <td>Blefar</td>
             </tr>
              <tr>
               <th scope="row"><input type="radio"></th>
-              <td><input type="text" class="form-control col-md-2"></td>
+              <td><input type="text" class="form-control col-md-3"></td>
               <td>História</td>
             </tr>
             <tr>
               <th scope="row"><input type="radio"></th>
-              <td><input type="text" class="form-control col-md-2"></td>
+              <td><input type="text" class="form-control col-md-3"></td>
               <td>Intimidação</td>
             </tr>
             <tr>
               <th scope="row"><input type="radio"></th>
-              <td><input type="text" class="form-control col-md-2"></td>
+              <td><input type="text" class="form-control col-md-3"></td>
               <td>Intuição</td>
             </tr>
             <tr>
               <th scope="row"><input type="radio"></th>
-              <td><input type="text" class="form-control col-md-2"></td>
+              <td><input type="text" class="form-control col-md-3"></td>
               <td>Investigação</td>
             </tr>
             <tr>
               <th scope="row"><input type="radio"></th>
-              <td><input type="text" class="form-control col-md-2"></td>
+              <td><input type="text" class="form-control col-md-3"></td>
               <td>Lidar com animais</td>
             </tr>
             <tr>
               <th scope="row"><input type="radio"></th>
-              <td><input type="text" class="form-control col-md-2"></td>
+              <td><input type="text" class="form-control col-md-3"></td>
               <td>Medicina</td>
             </tr>
             <tr>
               <th scope="row"><input type="radio"></th>
-              <td><input type="text" class="form-control col-md-2"></td>
+              <td><input type="text" class="form-control col-md-3"></td>
               <td>Natureza</td>
             </tr>
             <tr>
               <th scope="row"><input type="radio"></th>
-              <td><input type="text" class="form-control col-md-2"></td>
+              <td><input type="text" class="form-control col-md-3"></td>
               <td>Percepção</td>
             </tr>
             <tr>
               <th scope="row"><input type="radio"></th>
-              <td><input type="text" class="form-control col-md-2"></td>
+              <td><input type="text" class="form-control col-md-3"></td>
               <td>Persuasão</td>
             </tr>
             <tr>
               <th scope="row"><input type="radio"></th>
-              <td><input type="text" class="form-control col-md-2"></td>
+              <td><input type="text" class="form-control col-md-3"></td>
               <td>Prestidigitação</td>
             </tr>
             <tr>
               <th scope="row"><input type="radio"></th>
-              <td><input type="text" class="form-control col-md-2"></td>
+              <td><input type="text" class="form-control col-md-3"></td>
               <td>Religião</td>
             </tr>
             <tr>
               <th scope="row"><input type="radio"></th>
-              <td><input type="text" class="form-control col-md-2"></td>
+              <td><input type="text" class="form-control col-md-3"></td>
               <td>Sobrevivencia</td>
             </tr>
           </tbody>
-        </table> 
-        </div>
-     </div>
-
-     <div class="form-group col-md-3">
-      <div class="form-group col-md-6 pt-4">
-        <label for="campo3">Inspiração</label><br>
-        <input type="text" class="form-control " id="campo3">
-      </div>
-      <div class="form-group col-md-6 pd-5">
-        <label for="campo2">Bônus de proficiencia</label>
-        <input type="text" class="form-control" id="campo3">
-      </div>
-      <table class="table  pt-5">
-            <thead>
-                <th scope="col">Testes de resistência</th>
-            </thead>
-          <tbody>
-            <tr>
-              <th scope="row"><input type="radio"></th>
-              <td><input type="text" class="form-control col-md-2"></td>
-              <td>Força</td>
-            </tr>
-            <tr>
-              <th scope="row"><input type="radio"></th>
-              <td><input type="text" class="form-control col-md-2"></td>
-              <td>Destreza</td>
-            </tr>
-            <tr>
-              <th scope="row"><input type="radio"></th>
-              <td><input type="text" class="form-control col-md-2"></td>
-              <td>Constituição</td>
-            </tr>
-             <tr>
-              <th scope="row"><input type="radio"></th>
-              <td><input type="text" class="form-control col-md-2"></td>
-              <td>Inteligência</td>
-            </tr>
-             <tr>
-              <th scope="row"><input type="radio"></th>
-              <td><input type="text" class="form-control col-md-2"></td>
-              <td>Sabedoria</td>
-            </tr>
-             <tr>
-              <th scope="row"><input type="radio"></th>
-              <td><input type="text" class="form-control col-md-2"></td>
-              <td>Carisma</td>
-            </tr>
-          </tbody>
         </table>
-        
-     </div>
-   
-    <div class="form-group col-md-4  pt-4">
-    <div class="row"> 
-      <div class="col-md-4 pt-2"> 
-        <label for="campo1">Classe ARMD</label><br>
-        <input type="text" class="form-control" id="campo1">
-      </div>
-      <div class="col-md-4 pt-2">
-        <label for="campo1">Iniciativa</label><br>
-        <input type="text" class="form-control" id="campo1">
-      </div>
-      <div class="col-md-4 pt-2">
-        <label for="campo1">Desloc.</label><br>
-        <input type="text" class="form-control" id="campo1">
-      </div>
-  
-    </div>
-
-
-    <div class="row pt-5"> 
- 
-    <div class="col-md-10  text-left pl-5"> 
-        <label for="campo3">Pontos de vida atuais</label>
-        <input type="text" class="form-control" id="campo3">
-    </div> 
-    </div>
-      <div class=" col-md-10  text-left pr-2 pt-4"> 
-          <label for="campo3">Pontos de vida temporarios</label>
-          <input type="text" class="form-control" id="campo3">
-      </div>
-    </div>
+    </div>-->
     
    
     <div class="col-md-3 pt-4">
