@@ -46,7 +46,7 @@
             <a href="inicio"><img id="logo" src="front/img/logo.png"></a>
         </div>
         <div id="sair" class=" pt-2">
-            <a href="/web/Novapasta/fichaRPG/dev/front/index/"><button class="btn btn-outline-dark ">Sair</button></a>
+            <a href="index.php"><button class="btn btn-outline-dark ">Sair</button></a>
         </div>
     </nav>
 
@@ -55,7 +55,7 @@
     <div class="col-lg-10 py-2 offset-2 pl-3 row" >
       <div class="pt-5">
       <div class="pt-5 col-lg-2">
-      <a href="../Novapasta/fichaRPG/dev/front/ficha/"><button type="button"  data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" class=" far fa-plus-square btn btn-secondary btn-lg"> </button></a>
+      <a href="ficha.php"><button type="button"  data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" class=" far fa-plus-square btn btn-secondary btn-lg"> </button></a>
       </div>
       </div>
 
