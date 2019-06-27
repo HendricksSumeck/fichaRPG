@@ -10,11 +10,11 @@
     <!--SCRIPTS JS DO BOOTSTRAP -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script> 
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 </head>
 
 <body id="inicio">
-  
+
 <div class="container" id="containerLogin">
     <div class="row">
         <div class="col-md-3" id="app">
@@ -27,9 +27,11 @@
               <div class="form-group">
                 <label for="pwd">Senha:</label>
                 <input v-model="senhaLog" class="tamanho_div" type="password" class="form-control">
+								<alerta-senha v-if="alertas.log == 1">Email não existe</alerta-senha>
+								<alerta-senha v-if="alertas.log == 2">Senha invalida</alerta-senha>
               </div>
 
-            <span @click="loginUsuario" class="btn btn-danger">Entrar</span>  
+            <span @click="loginUsuario" class="btn btn-danger">Entrar</span>
             <span class="btn btn-danger" id="show-modal" @click="showModal = true">Cadastrar</span>
             <alerta-sucesso v-if="alerta" class="tamanho_div2">
                 {{usuario}}: Cadastrado com sucesso
@@ -44,29 +46,29 @@
                                     <label class="label_cadastro" for="nomeUsuario">Nome de usuário: </label>
                                     <alerta-valido v-if="alertas.alUs == 1"></alerta-valido>
                                     <alerta-invalido v-if="alertas.alUs == 2"></alerta-invalido>
-                                    <input type="text" v-model="usuario" id="nomeUsuario" class="form-control" placeholder="Dragon">                                   
+                                    <input type="text" v-model="usuario" id="nomeUsuario" class="form-control" placeholder="Dragon">
                                     <label class="label_cadastro" for="email">Email:</label>
                                     <alerta-valido v-if="alertas.alEm == 1"></alerta-valido>
                                     <alerta-invalido v-if="alertas.alEm == 2"></alerta-invalido>
                                     <input type="text" v-model="email" id="Cademail" class="form-control" placeholder="dragon5e@dragon.com">
                                     <label class="label_cadastro" for="senha">Senha:</label>
-                                    <alerta-senha v-if="alertas.alSe == 2">Senha muito pequena</alerta-senha>                                    
+                                    <alerta-senha v-if="alertas.alSe == 2">Senha muito pequena</alerta-senha>
                                     <input type="password" v-model="senha" id="senha" class="form-control" placeholder="Informe sua senha">
                                     <label class="label_cadastro" for="confSenha">Confirmar senha:</label>
                                     <alerta-senha v-if="alertas.alCose == 2">Senha incorreta</alerta-senha>
                                     <input type="password" v-model="confSenha" id="" class="form-control" placeholder="Confirme sua senha">
                                 </div>
-                                <span id="desativado" v-if='validacao' class="btn btn-danger disabled">Confirmar</span>         
-                                <span @click="cadastrarUsuario" v-if='!validacao' class="btn btn-success">Confirmar</span>           
+                                <span id="desativado" v-if='validacao' class="btn btn-danger disabled">Confirmar</span>
+                                <span @click="cadastrarUsuario" v-if='!validacao' class="btn btn-success">Confirmar</span>
                             </form>
                         </div>
                 </modal>
-             </div>             
-            </form>            
+             </div>
+            </form>
         </div>
     </div>
 </div>
-               
+
 <template id="modalRegistro">
     <transition name="modal">
         <div class="modal-mask">
@@ -97,7 +99,7 @@
 
 <template id="alertaSucesso">
     <transition name="fade">
-        <div class="alert alert-success" role="alert">                
+        <div class="alert alert-success" role="alert">
             <slot>Nome: <slot>
         </div>
     </transition>
@@ -111,8 +113,8 @@
 
 <template id="alertaInvalido">
     <transition name="fade">
-        <img class="check" src="https://img.icons8.com/flat_round/48/000000/cancel.png">   
-    </transition>   
+        <img class="check" src="https://img.icons8.com/flat_round/48/000000/cancel.png">
+    </transition>
 </template>
 
 <template id="senhaIncorreta">

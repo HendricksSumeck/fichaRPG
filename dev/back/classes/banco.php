@@ -1,9 +1,9 @@
 <?php
- 
+
     class Banco{
         private $cadastro;
         private $login;
-        
+
         //Cadastro
         public function verificaEmail($email){
             require("../conexao/conexao.php");
@@ -18,7 +18,7 @@
                 return $erro;
             }
         }
-        
+
         public function verificaUsuario($usuario){
             require("../conexao/conexao.php");
             try{
@@ -40,35 +40,24 @@
                 $select = $conexao->prepare($sql);
                 $select->bindValue(":email", $cadastro->getEmail());
                 $select->bindValue(":usuario", $cadastro->getUsuario());
-                $select->bindValue(":senha", $cadastro->senhaHash($cadastro->getSenha()));
-                $select->execute(); 
+                $select->bindValue(":senha", $cadastro->getSenha());
+                $select->execute();
                 return 1;
             }catch(PDOException $erro){
                 return 2;
-            }   
+            }
         }
-        
-        public function verificaLogin($email, $senha){
+
+        public function verificaLogin(Login $login){
             require("../conexao/conexao.php");
             try{
                 $sql = "SELECT id_login, email FROM login WHERE email = :email AND senha = :senha";
                 $select = $conexao->prepare($sql);
-                $select->bindValue(":email", $email);
-                $select->bindValue(":senha", $senha);
+                $select->bindValue(":email", $login->email);
+                $select->bindValue(":senha", $login->senha);
                 $select->execute();
-                //$select = $select->fetch(PDO::FETCH_ASSOC);
-                echo $contar = $select->rowCount();
-                if($contar > 0 ){
-                    $email = $_POST['email'];
-                    $senha = $_POST['senha'];
-                    $_SESSION['usuariolog'] = $email;
-                    $_SESSION['senhalog'] = $senha;
-                    header("refresh: 1, ../../front/inicio.php");
-                    exit; 
-                }else{
-                    echo('os dados estao incorretos');
-                }
-                
+                $select = $select->fetch(PDO::FETCH_ASSOC);
+                return $select;
             }catch(PDOException $e){
                 return $e;
             }

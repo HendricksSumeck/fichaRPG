@@ -6,10 +6,10 @@
     $usuario = $data["usuario"];
     $email = $data["email"];
     $senha = $data["senha"];
-    
+
     $banco = new Banco();
     $cadastro = new Cadastro($data['usuario'], $data['senha'], $data['email']);
-    
+
     $erro = $banco->cadastrarUsuario($cadastro);
     $data['erro'] = $erro;
 

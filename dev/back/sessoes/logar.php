@@ -1,24 +1,27 @@
 <?php
-ob_start();
-session_start();
+    require_once("../classes/banco.php");
+    require_once("../classes/login.php");
+    $data = json_decode(file_get_contents("php://input"), true);
 
-    require_once("../../front/index.php");
-    //require("../../back/classes/banco.php")
-    
+    $email = $data["emailLog"];
+    $senha = $data["senhaLog"];
+
     $banco = new Banco();
-    if(isset($_SESSION['usuariolog']) && (isset($_SESSION['senhalog']))){
-        header("location:index.php");
-        exit;
+    $bdEm = $banco->verificaEmail($email);
+
+
+    if($email == $bdEm['email']){
+        $login = new Login($email, $senha);
+        $logar = $banco->verificaLogin($login);
+        if($logar['email'] == NULL){
+            $data['erro']['erroLog'] = 2;//Senha errada
+        }else{
+            $data['erro']['erroLog'] = 3;//Logado com sucesso
+        }
+    }else{
+        $data['erro']['erroLog'] = 1;//Email inexistente
     }
 
-    if(isset($_POST['logar'])){
-        $email = trim(strip_tags($_POST['email']));
-        $senha = trim(strip_tags($_POST['senha']));
-        
-        $resultado = $banco->verificaLogin($email, $senha);
-    }
-    
     $status = json_encode($data);
     echo $status;
-    
 ?>
