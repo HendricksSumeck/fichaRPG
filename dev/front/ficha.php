@@ -20,12 +20,22 @@
     
     <div class="row" id="parte1">
             <div class="col-md-2">
-                <a href="#" id="img-perfil"><img class="card-img-top img-fluid" src="img/paladino.png" width="200px" height="200px" style="border-style: solid"></a>
+                <a href="#" id="img-perfil"><img class="card-img-top img-fluid rounded-circle " src="img/paladino.png" width="200px" height="200px" style="border-style: solid"></a>
+                <div class="overlay rounded-circle card-img-top img-fluid">
+                    <div class="text">Alterar imagem.</div>
+                </div>
             </div>
             
             <div class="form-group col-md-2 pt-4">
                 <label for="campo1">Nome do personagem:</label>
                 <input type="text" class="form-control" id="campo1">
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="campo1">Pontos de xp</label>
+                        <input type="text" class="form-control" id="campo1">
+                    </div>
+                
+                </div>
              </div>
 
             <div class="form-group col-md-2 pt-4">
@@ -47,12 +57,6 @@
                 <label for="campo1">Tendência</label>
                 <input type="text" class="form-control" id="campo1">
             </div>
-
-            <div class="form-group col-md-2 pt-4">
-                <label for="campo1">Pontos de xp</label>
-                <input type="text" class="form-control" id="campo1">
-            </div>
-            
         </div>  
 
     <hr align="center" width="1200" size="2" color="white">
@@ -83,22 +87,28 @@
         <input type="text" class="form-control" id="campo1">
       </div>
     
-    <div class="col-md-2">
-        <div class="col-md-12"> 
+    <div class="col-md-3">
+        <div class="col-md-8"> 
+          <label>PV totais</label>
+          <input type="text" class="form-control pt-5">
+        </div> 
+        <div class="col-md-8"> 
             <label for="campo3">PV atuais</label>
             <input type="text" class="form-control" id="campo3">
         </div> 
    
-        <div class="col-md-12"> 
+        <div class="col-md-8"> 
             <label for="campo3">PV temporarios</label>
             <input type="text" class="form-control" id="campo3">
         </div>
+        
+        
     </div>
 
      </div>
     
-    <div class="row  pt-5">
-     <div class="form-group col-md-2 pt-3">
+    <div class="row">
+     <div class="form-group col-md-2">
       <div>
          <label for="campo2">Força</label><br>
          <input type="text" class="form-control col-md-3 offset-md-1" id="campo3"><br><br>
@@ -138,8 +148,8 @@
                 </thead>
               <tbody>
                 <tr>
-                  <th scope="row"><input type="radio"></th>
-                  <td><input type="text" class="form-control col-md-3"></td>
+                  <th><input type="radio"></th>
+                  <td><input type="text" class=""></td>
                   <td>Força</td>
                 </tr>
                 <tr>
@@ -169,11 +179,44 @@
                 </tr>
               </tbody>
             </table>
-        </div>    
-        
-        
-</div>
-         <!--<div class="col-md-5">
+          </div>    
+   
+          <!--<div class="row">-->
+              <div class="col-md-4">  
+                <label for="campo3">TRAÇOS DE PERSONALIDADE</label>
+                  <textarea rows="4" cols="49" class="form-control" id="campo3">  
+                  </textarea>
+                  
+                <div class="row"> 
+                    <div class="col-md-12">
+                        <label for="campo3">IDEAIS</label>
+                        <textarea rows="4" cols="49" class="form-control" id="campo3">  
+                        </textarea>
+                    </div>
+                </div>
+                <div class="row"> 
+                    <div class="col-md-12">
+                        <label for="campo3">LIGAÇÕES</label>
+                        <textarea rows="4" cols="49" class="form-control" id="campo3">  
+                        </textarea>
+                    </div>
+                </div> 
+                <div class="row"> 
+                    <div class="col-md-12">
+                        <label for="campo3">DEFEITOS</label>
+                        <textarea rows="4" cols="49" class="form-control" id="campo3">  
+                        </textarea>
+                    </div>
+                </div> 
+              </div>  
+          
+         <!-- </div>-->
+        </div>
+      </div><!-- fecha o container-->
+
+
+<!--</div>
+         <div class="col-md-5">
             <table class="table">
             <thead>
                 <th scope="col">Testes de resistência</th>
@@ -266,42 +309,7 @@
             </tr>
           </tbody>
         </table>
-    </div>-->
-    
-   
-    <div class="col-md-3 pt-4">
-    <div class=" md-4 col-md-6 pt-1"> 
-          <label>PV totais</label>
-          <input type="text" class="form-control pt-5">
-    </div> 
-
-     <div class="pd-4">
-      <div class="pt-5">
-        <textarea class="form-control pt-5" name="personalidade" id="mensagem" cols="50" rows="3"></textarea>
-        <label class="text-center" for="campo1" style="">Traços de personalidade</label>
-      </div>
-      <div>
-       <textarea class="form-control pt-5" name="personalidade" id="mensagem" cols="50" rows="3"></textarea>
-       <label class="text-center" for="campo1" style="">Ideais</label>
-      </div>
-      <div>
-       <textarea class="form-control pt-5" name="personalidade" id="mensagem" cols="50" rows="3"></textarea>
-       <label for="campo1" style="">Ligações</label>
-      </div>
-      <div>
-       <textarea class="form-control pt-5" name="personalidade" id="mensagem" cols="50" rows="3"></textarea>
-       <label for="campo1" style="">Defeitos</label>
-      </div>
-     </div>
-    </div>
-
-
-
-    </div>
-    </div><!-- fecha o container-->
-
-
-
+    </div> -->
 
 </body>
 </html>
