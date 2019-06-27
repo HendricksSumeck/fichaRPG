@@ -42,11 +42,11 @@
   </nav>-->
 
   <nav class="nav navbar-expand-lg justify-content-between d-flex" id="nav">
-        <div class="logo">
-            <a href="inicio"><img id="logo" src="front/img/logo.png"></a>
+        <div>
+            <a href="inicio"><img id="logo" src="img/logo.png"></a>
         </div>
         <div id="sair" class=" pt-2">
-            <a href="index.php"><button class="btn btn-outline-dark ">Sair</button></a>
+            <a href="index.php"><button class="btn btn-outline-light ">Sair</button></a>
         </div>
     </nav>
 
@@ -66,8 +66,8 @@
             <h5 class="card-title text-center">Lucas3bolas</h5>
             <div class="row">
               <a href="#" class="btn btn-primary col-sm-10">Visualizar ficha</a>
-                <a href="#" class="btn btn-primary col-sm-2">X</a>
-                </div>
+              <a href="#" class="btn btn-primary col-sm-2">X</a>
+            </div>
           </div>
         </div>
       </div>
@@ -85,7 +85,7 @@
         </div>
       </div>
     </div>
-  
+
 </body>
 
 

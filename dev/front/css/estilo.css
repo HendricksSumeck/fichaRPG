@@ -16,24 +16,24 @@ body {
 #bodyini{
   background-image: url(../img/feito.png);
  }
- 
+
  #inicio{
      color: #fff;
  }
- 
+
  #nav{
-     background-color:   #333333;
+     background-color: #333333;
      background-size: 90px;
  }
 
  #logo {
-
+    height: 50px;
+    width: 50px;
 }
-
 
 #entrar{
     padding-left:10px ;
-    padding-top :30px; 
+    padding-top :30px;
 }
 
 .tamanho_div{
@@ -79,7 +79,7 @@ body {
     display: table-cell;
     vertical-align: middle;
   }
-  
+
   .modal-container {
     width: 400px;
     margin: 0px auto;
@@ -90,20 +90,20 @@ body {
     transition: all .3s ease;
     font-family: Helvetica, Arial, sans-serif;
   }
-  
+
   .modal-header h3 {
     margin-top: 0;
     color: rgba(0, 0, 0);
   }
-  
+
   .modal-body {
     margin: 20px 0;
   }
-  
+
   .modal-default-button {
     float: right;
   }
-  
+
   /*
    * The following styles are auto-applied to elements with
    * transition="modal" when their visibility is toggled
@@ -112,15 +112,15 @@ body {
    * You can easily play with the modal transition by editing
    * these styles.
    */
-  
+
   .modal-enter {
     opacity: 0;
   }
-  
+
   .modal-leave-to {
     opacity: 0;
   }
-  
+
   .modal-enter .modal-container,
   .modal-leave-active .modal-container {
     -webkit-transform: scale(1.1);
@@ -135,5 +135,5 @@ body {
   }
 
 a.img-perfil:hover{
-    
+
 }
