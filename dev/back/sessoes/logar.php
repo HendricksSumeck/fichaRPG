@@ -5,15 +5,15 @@
 
     $email = $data["emailLog"];
     $senha = $data["senhaLog"];
-
+    
     $banco = new Banco();
     $bdEm = $banco->verificaEmail($email);
-
 
     if($email == $bdEm['email']){
         $login = new Login($email, $senha);
         $logar = $banco->verificaLogin($login);
         if($logar['email'] == NULL){
+
             $data['erro']['erroLog'] = 2;//Senha errada
         }else{
             $data['erro']['erroLog'] = 3;//Logado com sucesso
