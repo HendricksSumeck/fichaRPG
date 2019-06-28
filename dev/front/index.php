@@ -27,8 +27,8 @@
               <div class="form-group">
                 <label for="pwd">Senha:</label>
                 <input v-model="senhaLog" class="tamanho_div" type="password" class="form-control">
-								<alerta-senha v-if="alertas.log == 1">Email não existe</alerta-senha>
-								<alerta-senha v-if="alertas.log == 2">Senha invalida</alerta-senha>
+				<alerta-senha v-if="alertas.log == 1">Email não existe</alerta-senha>
+				<alerta-senha v-if="alertas.log == 2">Senha invalida</alerta-senha>
               </div>
 
             <span @click="loginUsuario" class="btn btn-danger">Entrar</span>
