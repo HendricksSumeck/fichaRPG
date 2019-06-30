@@ -149,7 +149,7 @@
               <tbody>
                 <tr>
                   <th><input type="radio"></th>
-                  <td><input type="text" class=""></td>
+                  <td><input type="text" class="form-control col-md-3"></td>
                   <td>Força</td>
                 </tr>
                 <tr>
@@ -179,47 +179,11 @@
                 </tr>
               </tbody>
             </table>
-          </div>    
-   
-          <!--<div class="row">-->
-              <div class="col-md-4">  
-                <label for="campo3">TRAÇOS DE PERSONALIDADE</label>
-                  <textarea rows="4" cols="49" class="form-control" id="campo3">  
-                  </textarea>
-                  
-                <div class="row"> 
-                    <div class="col-md-12">
-                        <label for="campo3">IDEAIS</label>
-                        <textarea rows="4" cols="49" class="form-control" id="campo3">  
-                        </textarea>
-                    </div>
-                </div>
-                <div class="row"> 
-                    <div class="col-md-12">
-                        <label for="campo3">LIGAÇÕES</label>
-                        <textarea rows="4" cols="49" class="form-control" id="campo3">  
-                        </textarea>
-                    </div>
-                </div> 
-                <div class="row"> 
-                    <div class="col-md-12">
-                        <label for="campo3">DEFEITOS</label>
-                        <textarea rows="4" cols="49" class="form-control" id="campo3">  
-                        </textarea>
-                    </div>
-                </div> 
-              </div>  
-          
-         <!-- </div>-->
-        </div>
-      </div><!-- fecha o container-->
-
-
-<!--</div>
-         <div class="col-md-5">
+            <div class="row">
+                <div class="col-md-12">
             <table class="table">
             <thead>
-                <th scope="col">Testes de resistência</th>
+                <th scope="col">Pericias</th>
             </thead>
           <tbody>
             <tr>
@@ -309,7 +273,52 @@
             </tr>
           </tbody>
         </table>
-    </div> -->
+    </div>
+            </div>
+          </div>    
+   
+          <!--<div class="row">-->
+              <div class="col-md-4">  
+                <label for="campo3">TRAÇOS DE PERSONALIDADE</label>
+                  <textarea rows="4" cols="49" class="form-control" id="campo3">  
+                  </textarea>
+                  
+                <div class="row"> 
+                    <div class="col-md-12">
+                        <label for="campo3">IDEAIS</label>
+                        <textarea rows="4" cols="49" class="form-control" id="campo3">  
+                        </textarea>
+                    </div>
+                </div>
+                <div class="row"> 
+                    <div class="col-md-12">
+                        <label for="campo3">LIGAÇÕES</label>
+                        <textarea rows="4" cols="49" class="form-control" id="campo3">  
+                        </textarea>
+                    </div>
+                </div> 
+                <div class="row"> 
+                    <div class="col-md-12">
+                        <label for="campo3">DEFEITOS</label>
+                        <textarea rows="4" cols="49" class="form-control" id="campo3">  
+                        </textarea>
+                    </div>
+                </div> 
+                  <div class="row"> 
+                    <div class="col-md-12">
+                        <label for="campo3">CARACTERISTICAS E HABILIDADES</label>
+                        <textarea rows="35" cols="49" class="form-control" id="campo3">  
+                        </textarea>
+                    </div>
+                </div> 
+              </div>  
+          
+         <!-- </div>-->
+        </div>
+      </div><!-- fecha o container-->
 
+         
+    
 </body>
+
 </html>
