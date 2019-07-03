@@ -42,46 +42,54 @@
   </nav>-->
 
   <nav class="nav navbar-expand-lg justify-content-between d-flex" id="nav">
-        <div>
-            <a href="inicio"><img id="logo" src="img/logo.png"></a>
-        </div>
-        <div id="sair" class=" pt-2">
-            <a href="index.php"><button class="btn btn-outline-light ">Sair</button></a>
-        </div>
-    </nav>
+    <div>
+      <a href="inicio"><img id="logo" src="img/logo.png"></a>
+    </div>
+    <div id="sair" class=" pt-2">
+      <a href="index.php"><button class="btn btn-outline-light ">Sair</button></a>
+    </div>
+  </nav>
 
   <div class="col-sm-12 row py-2 pt-5">
 
-    <div class="col-lg-10 py-2 offset-2 pl-3 row" >
+    <div class="col-lg-10 py-2 offset-2 pl-3 row">
       <div class="pt-5">
-      <div class="pt-5 col-lg-2">
-      <a href="ficha.php"><button type="button"  data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" class=" far fa-plus-square btn btn-secondary btn-lg"> </button></a>
-      </div>
+        <div class="pt-5 col-lg-2">
+          <a href="ficha.php"><button type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" class=" far fa-plus-square btn btn-secondary btn-lg"> </button></a>
+        </div>
       </div>
 
       <div class="pl-4 col-lg-3">
-        <div class="card " style="width: 18rem;">
-          <img class="card-img-top" src="../front/img/lucasbolas.png " alt="Card image cap" width="200px" height="200px">
+        <div class="card " >
+          <img class="card-img-top img-responsive" src="../front/img/lucasbolas.png " alt="Card image cap" width="250" height="200">
           <div class=" card-body">
             <h5 class="card-title text-center">Lucas3bolas</h5>
             <div class="row">
-              <a href="#" class="btn btn-primary col-sm-10">Visualizar ficha</a>
-              <a href="#" class="btn btn-primary col-sm-2">X</a>
+              <div class="col-sm-6">
+                <span href="#" class="btn btn-primary">Visualizar ficha</span>
+              </div>
+              <div class="col-sm-4 offset-2">
+                <span href="#" class="btn btn-primary ">X</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="pl-5 col-lg-2">
-          <div class="card" style="width: 18rem;">
-           <img class="card-img-top" src="../front/img/paladino.png" alt="Card image cap" width="200px" height="200px">
-            <div class=" card-body">
-              <h5 class="card-title text-center">Rubinho</h5>
-                <div class="row">
-              <a href="#" class="btn btn-primary col-sm-10">Visualizar ficha</a>
-                <a href="#" class="btn btn-primary col-sm-2">X</a>
-                </div>
+      <div class="pl-4 col-lg-3">
+        <div class="card">
+          <img class="card-img-top img-responsive" src="../front/img/paladino.png" alt="Card image cap" width="250" height="200">
+          <div class=" card-body">
+            <h5 class="card-title text-center">Rubinho</h5>
+            <div class="row">
+            <div class="col-sm-6">
+                <span href="#" class="btn btn-primary">Visualizar ficha</span>
+              </div>
+              <div class="col-sm-4 offset-2">
+                <span href="#" class="btn btn-primary ">X</span>
+              </div>
             </div>
+          </div>
         </div>
       </div>
     </div>
