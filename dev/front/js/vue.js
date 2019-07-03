@@ -156,7 +156,7 @@ Vue.component('alerta-senha', {
 
         .then(function (response){
           local.saida = response.data;
-          console.log(local.saida);
+          //console.log(local.saida);
           if(local.saida.erro.erroLog == 1){
               local.alertas.log = 1;
           }

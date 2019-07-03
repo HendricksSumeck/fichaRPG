@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>5RPG</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/estiloficha.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!--Cabeçalho-->
+  <section class="cabecalho">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <img id="imgPerfil" class="img-fluid rounded-circle" src="img/paladino.png">
+        </div>
+        <div class="offset-md-3 col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="pt-2">
+                    <input class="form-control form-control-sm" type="text" placeholder="Nome">
+                  </div>
+                  <div class="pt-4">
+                    <input class="form-control form-control-sm" type="text" placeholder="Classe e nivel">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="pt-2">
+                    <input class="form-control form-control-sm" type="text" placeholder="Antecedente">
+                  </div>
+                  <div class="pt-4">
+                    <input class="form-control form-control-sm" type="text" placeholder="Raça">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="pt-2">
+                    <input class="form-control form-control-sm" type="text" placeholder="Tendência">
+                  </div>
+                  <div class="pt-4">
+                    <input class="form-control form-control-sm" type="text" placeholder="Pontos de xp">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr align="center" width="1200" size="2" color="white">
+
+  <section class="dados">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="card">
+            <div class="card-body">
+              <div class="card-att">
+                <input class="form-control form-control-sm" type="text" placeholder="Força">
+              </div>
+              <div class="card-att mt-2">
+                <input class="form-control form-control-sm" type="text" placeholder="Destreza">
+              </div>
+              <div class="card-att mt-2">
+                <input class="form-control form-control-sm" type="text" placeholder="Constituição">
+              </div>
+              <div class="card-att mt-2">
+                <input class="form-control form-control-sm" type="text" placeholder="Inteligência">
+              </div>
+              <div class="card-att mt-2">
+                <input class="form-control form-control-sm" type="text" placeholder="Sabedoria">
+              </div>
+              <div class="card-att mt-2">
+                <input class="form-control form-control-sm" type="text" placeholder="Carisma">
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              Ouro
+              <div class="col-md-8">
+                  <label for="exampleInputPassword1">PC</label>
+                  <input class="form-control form-control-sm" type="text" placeholder="0">
+              </div>
+              <div class="col-md-8">
+                  <label for="exampleInputPassword1">PP</label>
+                  <input class="form-control form-control-sm" type="text" placeholder="0">
+              </div>
+              <div class="col-md-8">
+                  <label for="exampleInputPassword1">PE</label>
+                  <input class="form-control form-control-sm" type="text" placeholder="0">
+              </div>
+              <div class="col-md-8">
+                  <label for="exampleInputPassword1">PD</label>
+                  <input class="form-control form-control-sm" type="text" placeholder="0">
+              </div>
+              <div class="col-md-8">
+                  <label for="exampleInputPassword1">PL</label>
+                  <input class="form-control form-control-sm" type="text" placeholder="0">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-4">
+                  <input class="form-control form-control-lg" type="text" placeholder="0">
+                </div>
+                <div class="col-md-4">
+                  INSPIRAÇÃO
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <input class="form-control form-control-lg" type="text" placeholder="0">
+                </div>
+                <div class="col-md-8">
+                  BÔNUS DE PROFICIÊNCIA
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-1">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                </div>
+                <div class="col-md-3">
+                  <input class="form-control form-control-sm" type="text" placeholder="0">
+                </div>
+                <div class="col-md-5">
+                  Força
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-1">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                </div>
+                <div class="col-md-3">
+                  <input class="form-control form-control-sm" type="text" placeholder="0">
+                </div>
+                <div class="col-md-5">
+                  Destreza
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-1">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                </div>
+                <div class="col-md-3">
+                  <input class="form-control form-control-sm" type="text" placeholder="0">
+                </div>
+                <div class="col-md-6">
+                  Constituição
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-1">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                </div>
+                <div class="col-md-3">
+                  <input class="form-control form-control-sm" type="text" placeholder="0">
+                </div>
+                <div class="col-md-6">
+                  Inteligência
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-1">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                </div>
+                <div class="col-md-3">
+                  <input class="form-control form-control-sm" type="text" placeholder="0">
+                </div>
+                <div class="col-md-5">
+                  Sabedoria
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-1">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                </div>
+                <div class="col-md-3">
+                  <input class="form-control form-control-sm" type="text" placeholder="0">
+                </div>
+                <div class="col-md-5">
+                  Carisma
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-1">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                </div>
+                <div class="col-md-3">
+                  <input class="form-control form-control-sm" type="text" placeholder="0">
+                </div>
+                <div class="col-md-5">
+                  Força
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-1">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                </div>
+                <div class="col-md-3">
+                  <input class="form-control form-control-sm" type="text" placeholder="0">
+                </div>
+                <div class="col-md-5">
+                  Força
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-1">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                </div>
+                <div class="col-md-3">
+                  <input class="form-control form-control-sm" type="text" placeholder="0">
+                </div>
+                <div class="col-md-5">
+                  Força
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-1">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                </div>
+                <div class="col-md-3">
+                  <input class="form-control form-control-sm" type="text" placeholder="0">
+                </div>
+                <div class="col-md-5">
+                  Força
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-1">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                </div>
+                <div class="col-md-3">
+                  <input class="form-control form-control-sm" type="text" placeholder="0">
+                </div>
+                <div class="col-md-5">
+                  Força
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-1">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                </div>
+                <div class="col-md-3">
+                  <input class="form-control form-control-sm" type="text" placeholder="0">
+                </div>
+                <div class="col-md-5">
+                  Força
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-1">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                </div>
+                <div class="col-md-3">
+                  <input class="form-control form-control-sm" type="text" placeholder="0">
+                </div>
+                <div class="col-md-5">
+                  Força
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-1">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                </div>
+                <div class="col-md-3">
+                  <input class="form-control form-control-sm" type="text" placeholder="0">
+                </div>
+                <div class="col-md-5">
+                  Força
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-1">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                </div>
+                <div class="col-md-3">
+                  <input class="form-control form-control-sm" type="text" placeholder="0">
+                </div>
+                <div class="col-md-5">
+                  Força
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-1">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                </div>
+                <div class="col-md-3">
+                  <input class="form-control form-control-sm" type="text" placeholder="0">
+                </div>
+                <div class="col-md-5">
+                  Força
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-1">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                </div>
+                <div class="col-md-3">
+                  <input class="form-control form-control-sm" type="text" placeholder="0">
+                </div>
+                <div class="col-md-5">
+                  Força
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-1">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                </div>
+                <div class="col-md-3">
+                  <input class="form-control form-control-sm" type="text" placeholder="0">
+                </div>
+                <div class="col-md-5">
+                  Força
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-1">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                </div>
+                <div class="col-md-3">
+                  <input class="form-control form-control-sm" type="text" placeholder="0">
+                </div>
+                <div class="col-md-5">
+                  Força
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-1">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                </div>
+                <div class="col-md-3">
+                  <input class="form-control form-control-sm" type="text" placeholder="0">
+                </div>
+                <div class="col-md-5">
+                  Força
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-1">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                </div>
+                <div class="col-md-3">
+                  <input class="form-control form-control-sm" type="text" placeholder="0">
+                </div>
+                <div class="col-md-5">
+                  Força
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-1">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                </div>
+                <div class="col-md-3">
+                  <input class="form-control form-control-sm" type="text" placeholder="0">
+                </div>
+                <div class="col-md-5">
+                  Força
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-1">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                </div>
+                <div class="col-md-3">
+                  <input class="form-control form-control-sm" type="text" placeholder="0">
+                </div>
+                <div class="col-md-5">
+                  Força
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-1">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                </div>
+                <div class="col-md-3">
+                  <input class="form-control form-control-sm" type="text" placeholder="0">
+                </div>
+                <div class="col-md-5">
+                  Força
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-4">
+                    <input class="form-control form-control-sm" type="text" placeholder="0">
+                    CLASSE ARMD
+                </div>
+                <div  class="col-md-4">
+                    <input class="form-control form-control-sm" type="text" placeholder="0">
+                    INICIATIVA
+                </div>
+                <div  class="col-md-4">
+                    <input class="form-control form-control-sm" type="text" placeholder="0">
+                    DESLOC.
+                </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-4">
+                      <input class="form-control form-control-sm" type="text" placeholder="0">
+                  </div>
+                  <div class="offset-md-4 col-md-4">
+                      <input class="form-control form-control-sm" type="text" placeholder="0">
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="offset-md-4 col-md-4">
+                      <input class="form-control form-control-sm" type="text" placeholder="0">
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-4">
+                      <input class="form-control form-control-sm" type="text" placeholder="0">
+                  </div>
+                  <div class="offset-md-4 col-md-4">
+                      <div class="row">
+                          <div class="col-md-4">
+                              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                          </div>
+                          <div class="col-md-4">
+                              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                          </div>
+                          <div class="col-md-4">
+                              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                          </div>
+                      </div>
+                      <div class="row pt-4">
+                          <div class="col-md-4">
+                              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                          </div>
+                          <div class="col-md-4">
+                              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                          </div>
+                          <div class="col-md-4">
+                              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                  <div class="col-md-4">
+                      <input class="form-control form-control-sm" type="text" placeholder="0">
+                  </div>
+                  <div  class="col-md-4">
+                      <input class="form-control form-control-sm" type="text" placeholder="0">
+                  </div>
+                  <div  class="col-md-4">
+                      <input class="form-control form-control-sm" type="text" placeholder="0">
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-4">
+                      <input class="form-control form-control-sm" type="text" placeholder="0">
+                  </div>
+                  <div  class="col-md-4">
+                      <input class="form-control form-control-sm" type="text" placeholder="0">
+                  </div>
+                  <div  class="col-md-4">
+                      <input class="form-control form-control-sm" type="text" placeholder="0">
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-4">
+                      <input class="form-control form-control-sm" type="text" placeholder="0">
+                  </div>
+                  <div  class="col-md-4">
+                      <input class="form-control form-control-sm" type="text" placeholder="0">
+                  </div>
+                  <div  class="col-md-4">
+                      <input class="form-control form-control-sm" type="text" placeholder="0">
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+                <div class="form-group">
+                    <textarea style="resize: none" class="form-control" id="exampleFormControlTextarea1"
+                      rows="5"></textarea>
+                    <label for="campo3">ATAQUES E MAGIAS</label>
+                  </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-body">
+              <div class="form-group">
+                <textarea style="resize: none" class="form-control" id="exampleFormControlTextarea1"
+                  rows="5"></textarea>
+                <label for="campo3">IDEAIS</label>
+              </div>
+              <div class="form-group">
+                <textarea style="resize: none" class="form-control" id="exampleFormControlTextarea1"
+                  rows="5"></textarea>
+                <label for="campo3">LIGAÇÕES</label>
+              </div>
+              <div class="form-group">
+                <textarea style="resize: none" class="form-control" id="exampleFormControlTextarea1"
+                  rows="5"></textarea>
+                <label for="campo3">DEFEITOS</label>
+              </div>
+              <div class="form-group">
+                <textarea style="resize: none" class="form-control" id="exampleFormControlTextarea1"
+                  rows="5"></textarea>
+                <label for="campo3">CARACTERISTICAS E HABILIDADES</label>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+                <div class="form-group">
+                    <textarea style="resize: none" class="form-control" id="exampleFormControlTextarea1"
+                      rows="10"></textarea>
+                    <label for="campo3">CARACTERÍSTICAS E HABILIDADES</label>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+</body>
+
+</html>
