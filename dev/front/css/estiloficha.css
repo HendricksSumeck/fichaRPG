@@ -1,0 +1,97 @@
+body {
+  background-image: url(../img/papel.jpg);
+}
+
+#imgPerfil {
+  width: 150px;
+  height: 150px;
+}
+
+.cabecalho {
+  padding: 1rem 0 0;
+}
+
+.card {
+  border: 0;
+  border-bottom: 0.25rem solid #161616;
+}
+
+.card-att{
+  padding: 0.5rem;
+  height: 100px;
+  border: 0.1rem solid #161616;
+  border-radius: 10px;
+}
+
+.card-info{
+  padding: 0.5rem;
+  border: 0.1rem solid #161616;
+  border-radius: 10px;
+}
+
+.card-test{
+  padding: 0.5rem;
+  border: 0.1rem solid #161616;
+  border-radius: 10px;
+}
+
+.card h4 {
+  font-size: 0.8rem;
+  font-family: 'Varela Round';
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+}
+
+.card hr {
+  border-color: #64a19d;
+  border-width: 0.25rem;
+  width: 3rem;
+}
+
+.social {
+  margin-top: 5rem;
+}
+
+.social a {
+  text-align: center;
+  height: 3rem;
+  width: 3rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 100%;
+  line-height: 3rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.social a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.social a:active {
+  color: #fff;
+}
+
+a {
+  color: #64a19d;
+}
+
+a:focus,
+a:hover {
+  text-decoration: none;
+  color: #3c6360;
+}
+
+.bg-black {
+  background-color: #161616 !important;
+}
+
+.bg-primary {
+  background-color: #64a19d !important;
+}
+
+.text-primary {
+  color: #64a19d !important;
+}
+
+.dados{
+  padding: 1rem 0 0;
+}
