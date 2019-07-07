@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>5RPG</title>
+  <title>dragon5e</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -72,54 +72,94 @@
 
   <hr align="center" width="1200" size="2" color="white">
 
-  <section class="dados">
+  <section id='app1' class="dados">
     <div class="container">
       <div class="row">
         <div class="col-md-2">
           <div class="card">
             <div class="card-body">
               <div class="card-att">
-                <input class="form-control form-control-sm" type="text" placeholder="Força">
+                <p class="text-center">Força</p>
+                <input v-model="forca" class="form-control form-control-lg offset-3 col-md-6" type="text"
+                  placeholder="0">
+                <div class="offset-4 pt-1">
+                  <p class="circulo text-center">{{proeficiencias.fo}}</p>
+                </div>
               </div>
               <div class="card-att mt-2">
-                <input class="form-control form-control-sm" type="text" placeholder="Destreza">
+                <p class="text-center">Destreza</p>
+                <input v-model="destreza" class="form-control form-control-lg offset-3 col-md-6" type="text"
+                  placeholder="0">
+                <div class="offset-4 pt-1">
+                  <p class="circulo text-center">{{proeficiencias.de}}</p>
+                </div>
               </div>
               <div class="card-att mt-2">
-                <input class="form-control form-control-sm" type="text" placeholder="Constituição">
+                <p class="text-center">Constituição</p>
+                <input v-model="constituicao" class="form-control form-control-lg offset-3 col-md-6" type="text"
+                  placeholder="0">
+                <div class="offset-4 pt-1">
+                  <p class="circulo text-center">{{proeficiencias.co}}</p>
+                </div>
               </div>
               <div class="card-att mt-2">
-                <input class="form-control form-control-sm" type="text" placeholder="Inteligência">
+                <p class="text-center">Inteligência</p>
+                <input v-model="inteligencia" class="form-control form-control-lg offset-3 col-md-6" type="text"
+                  placeholder="0">
+                <div class="offset-4 pt-1">
+                  <p class="circulo text-center">{{proeficiencias.in}}</p>
+                </div>
               </div>
               <div class="card-att mt-2">
-                <input class="form-control form-control-sm" type="text" placeholder="Sabedoria">
+                <p class="text-center">Sabedoria</p>
+                <input v-model="sabedoria" class="form-control form-control-lg offset-3 col-md-6" type="text"
+                  placeholder="0">
+                <div class="offset-4 pt-1">
+                  <p class="circulo text-center">{{proeficiencias.sa}}</p>
+                </div>
               </div>
               <div class="card-att mt-2">
-                <input class="form-control form-control-sm" type="text" placeholder="Carisma">
+                <p class="text-center">Carisma</p>
+                <input v-model="carisma" class="form-control form-control-lg offset-3 col-md-6" type="text"
+                  placeholder="0">
+                <div class="offset-4 pt-1">
+                  <p class="circulo text-center">{{proeficiencias.ca}}</p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="card">
+          <div class="card mt-1">
             <div class="card-body">
               Ouro
               <div class="col-md-8">
-                  <label for="exampleInputPassword1">PC</label>
-                  <input class="form-control form-control-sm" type="text" placeholder="0">
+                <div class="row">
+                  <p class="col-md-8 mr-n1 pt-1">PC:</p>
+                  <input class="ml-n2 form-control form-control-sm col-md-4" type="text" placeholder="0">
+                </div>
               </div>
               <div class="col-md-8">
-                  <label for="exampleInputPassword1">PP</label>
-                  <input class="form-control form-control-sm" type="text" placeholder="0">
+                <div class="row">
+                  <p class="col-md-8 mr-n1 pt-1">PP:</p>
+                  <input class="ml-n2 form-control form-control-sm col-md-4" type="text" placeholder="0">
+                </div>
               </div>
               <div class="col-md-8">
-                  <label for="exampleInputPassword1">PE</label>
-                  <input class="form-control form-control-sm" type="text" placeholder="0">
+                <div class="row">
+                  <p class="col-md-8 mr-n1 pt-1">PE:</p>
+                  <input class="ml-n2 form-control form-control-sm col-md-4" type="text" placeholder="0">
+                </div>
               </div>
               <div class="col-md-8">
-                  <label for="exampleInputPassword1">PD</label>
-                  <input class="form-control form-control-sm" type="text" placeholder="0">
+                <div class="row">
+                  <p class="col-md-8 mr-n1 pt-1">PD:</p>
+                  <input class="ml-n2 form-control form-control-sm col-md-4" type="text" placeholder="0">
+                </div>
               </div>
               <div class="col-md-8">
-                  <label for="exampleInputPassword1">PL</label>
-                  <input class="form-control form-control-sm" type="text" placeholder="0">
+                <div class="row">
+                  <p class="col-md-8 mr-n1 pt-1">PL:</p>
+                  <input class="ml-n2 form-control form-control-sm col-md-4" type="text" placeholder="0">
+                </div>
               </div>
             </div>
           </div>
@@ -127,288 +167,112 @@
         <div class="col-md-3">
           <div class="card">
             <div class="card-body">
-              <div class="row">
-                <div class="col-md-4">
+              <div class="row borda">
+                <div class="col-md-4 pt-3">
                   <input class="form-control form-control-lg" type="text" placeholder="0">
+                  <!-- <h5 class="border text-center h-75 pt-2">0</h5> -->
                 </div>
-                <div class="col-md-4">
-                  INSPIRAÇÃO
+                <div class="col-md-7 pt-4">
+                  <p class="text-center">INSPIRAÇÃO</p>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-md-4">
+              <div class="row borda mt-2">
+                <div class="col-md-4 pt-3">
                   <input class="form-control form-control-lg" type="text" placeholder="0">
+                  <!-- <h5 class="border text-center h-75 pt-2">0</h5> -->
                 </div>
-                <div class="col-md-8">
-                  BÔNUS DE PROFICIÊNCIA
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-1">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                </div>
-                <div class="col-md-3">
-                  <input class="form-control form-control-sm" type="text" placeholder="0">
-                </div>
-                <div class="col-md-5">
-                  Força
+                <div class="col-md-8 pt-3">
+                  <p class="text-center">BÔNUS DE PROFICIÊNCIA</p>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-md-1">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+              <div class="row bordateste">
+                <div class="row">
+                  <div class="offset-2 col-md-1 pt-3">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                  </div>
+                  <div class="col-md-3 pt-2">
+                    <input class="form-control form-control-sm" type="text" :placeholder="proeficiencias.fo">
+                  </div>
+                  <div class="col-md-5 pt-2">
+                    <p class="text-center">Força</p>
+                  </div>
                 </div>
-                <div class="col-md-3">
-                  <input class="form-control form-control-sm" type="text" placeholder="0">
+                <div class="row">
+                  <div class="offset-2 col-md-1 pt-3">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                  </div>
+                  <div class="col-md-3 pt-2">
+                    <input class="form-control form-control-sm" type="text" :placeholder="proeficiencias.de">
+                  </div>
+                  <div class="col-md-5 pt-2">
+                    <p class="text-center">Destreza</p>
+                  </div>
                 </div>
-                <div class="col-md-5">
-                  Destreza
+                <div class="row">
+                  <div class="offset-2 col-md-1 pt-3">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                  </div>
+                  <div class="col-md-3 pt-2">
+                    <input class="form-control form-control-sm" type="text" :placeholder="proeficiencias.co">
+                  </div>
+                  <div class="col-md-5 pt-2">
+                    <p class="text-center">Constituição</p>
+                  </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="col-md-1">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                <div class="row">
+                  <div class="offset-2 col-md-1 pt-3">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                  </div>
+                  <div class="col-md-3 pt-2">
+                    <input class="form-control form-control-sm" type="text" :placeholder="proeficiencias.in">
+                  </div>
+                  <div class="col-md-5 pt-2">
+                    <p class="text-center">Inteligência</p>
+                  </div>
                 </div>
-                <div class="col-md-3">
-                  <input class="form-control form-control-sm" type="text" placeholder="0">
+                <div class="row">
+                  <div class="offset-2 col-md-1 pt-3">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                  </div>
+                  <div class="col-md-3 pt-2">
+                    <input class="form-control form-control-sm" type="text" :placeholder="proeficiencias.sa">
+                  </div>
+                  <div class="col-md-5 pt-2">
+                    <p class="text-center">Sabedoria</p>
+                  </div>
                 </div>
-                <div class="col-md-6">
-                  Constituição
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-1">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                </div>
-                <div class="col-md-3">
-                  <input class="form-control form-control-sm" type="text" placeholder="0">
-                </div>
-                <div class="col-md-6">
-                  Inteligência
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-1">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                </div>
-                <div class="col-md-3">
-                  <input class="form-control form-control-sm" type="text" placeholder="0">
-                </div>
-                <div class="col-md-5">
-                  Sabedoria
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-1">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                </div>
-                <div class="col-md-3">
-                  <input class="form-control form-control-sm" type="text" placeholder="0">
-                </div>
-                <div class="col-md-5">
-                  Carisma
+                <div class="row">
+                  <div class="offset-2 col-md-1 pt-3">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                  </div>
+                  <div class="col-md-3 pt-2">
+                    <input class="form-control form-control-sm" type="text" :placeholder="proeficiencias.ca">
+                  </div>
+                  <div class="col-md-5 pt-2">
+                    <p class="text-center">Carisma</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="card">
+          <div class="card mt-1">
             <div class="card-body">
-              <div class="row">
-                <div class="col-md-1">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                </div>
-                <div class="col-md-3">
-                  <input class="form-control form-control-sm" type="text" placeholder="0">
-                </div>
-                <div class="col-md-5">
-                  Força
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-1">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                </div>
-                <div class="col-md-3">
-                  <input class="form-control form-control-sm" type="text" placeholder="0">
-                </div>
-                <div class="col-md-5">
-                  Força
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-1">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                </div>
-                <div class="col-md-3">
-                  <input class="form-control form-control-sm" type="text" placeholder="0">
-                </div>
-                <div class="col-md-5">
-                  Força
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-1">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                </div>
-                <div class="col-md-3">
-                  <input class="form-control form-control-sm" type="text" placeholder="0">
-                </div>
-                <div class="col-md-5">
-                  Força
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-1">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                </div>
-                <div class="col-md-3">
-                  <input class="form-control form-control-sm" type="text" placeholder="0">
-                </div>
-                <div class="col-md-5">
-                  Força
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-1">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                </div>
-                <div class="col-md-3">
-                  <input class="form-control form-control-sm" type="text" placeholder="0">
-                </div>
-                <div class="col-md-5">
-                  Força
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-1">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                </div>
-                <div class="col-md-3">
-                  <input class="form-control form-control-sm" type="text" placeholder="0">
-                </div>
-                <div class="col-md-5">
-                  Força
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-1">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                </div>
-                <div class="col-md-3">
-                  <input class="form-control form-control-sm" type="text" placeholder="0">
-                </div>
-                <div class="col-md-5">
-                  Força
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-1">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                </div>
-                <div class="col-md-3">
-                  <input class="form-control form-control-sm" type="text" placeholder="0">
-                </div>
-                <div class="col-md-5">
-                  Força
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-1">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                </div>
-                <div class="col-md-3">
-                  <input class="form-control form-control-sm" type="text" placeholder="0">
-                </div>
-                <div class="col-md-5">
-                  Força
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-1">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                </div>
-                <div class="col-md-3">
-                  <input class="form-control form-control-sm" type="text" placeholder="0">
-                </div>
-                <div class="col-md-5">
-                  Força
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-1">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                </div>
-                <div class="col-md-3">
-                  <input class="form-control form-control-sm" type="text" placeholder="0">
-                </div>
-                <div class="col-md-5">
-                  Força
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-1">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                </div>
-                <div class="col-md-3">
-                  <input class="form-control form-control-sm" type="text" placeholder="0">
-                </div>
-                <div class="col-md-5">
-                  Força
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-1">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                </div>
-                <div class="col-md-3">
-                  <input class="form-control form-control-sm" type="text" placeholder="0">
-                </div>
-                <div class="col-md-5">
-                  Força
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-1">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                </div>
-                <div class="col-md-3">
-                  <input class="form-control form-control-sm" type="text" placeholder="0">
-                </div>
-                <div class="col-md-5">
-                  Força
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-1">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                </div>
-                <div class="col-md-3">
-                  <input class="form-control form-control-sm" type="text" placeholder="0">
-                </div>
-                <div class="col-md-5">
-                  Força
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-1">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                </div>
-                <div class="col-md-3">
-                  <input class="form-control form-control-sm" type="text" placeholder="0">
-                </div>
-                <div class="col-md-5">
-                  Força
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-1">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                </div>
-                <div class="col-md-3">
-                  <input class="form-control form-control-sm" type="text" placeholder="0">
-                </div>
-                <div class="col-md-5">
-                  Força
+              <div class="row bordateste">
+                <div v-for="pericia in pericias" class="row">
+                  <div class="offset-2 col-md-1 pt-3">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                  </div>
+                  <div class="col-md-3 pt-2">
+                    <input v-if="pericia.tipo == 1" class="form-control form-control-sm" type="text" :placeholder="proeficiencias.fo">
+                    <input v-if="pericia.tipo == 2" class="form-control form-control-sm" type="text" :placeholder="proeficiencias.de">
+                    <input v-if="pericia.tipo == 3" class="form-control form-control-sm" type="text" :placeholder="proeficiencias.co">
+                    <input v-if="pericia.tipo == 4" class="form-control form-control-sm" type="text" :placeholder="proeficiencias.in">
+                    <input v-if="pericia.tipo == 5" class="form-control form-control-sm" type="text" :placeholder="proeficiencias.sa">
+                    <input v-if="pericia.tipo == 6" class="form-control form-control-sm" type="text" :placeholder="proeficiencias.ca">
+                  </div>
+                  <div class="col-md-5 pt-2">
+                    <p class="text-center">{{pericia.nome}}</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -419,106 +283,140 @@
             <div class="card-body">
               <div class="row">
                 <div class="col-md-4">
-                    <input class="form-control form-control-sm" type="text" placeholder="0">
-                    CLASSE ARMD
+                  <input class="form-control form-control-sm" type="text" placeholder="0">
+                  <p class="text-center">Classe ARMD</p>
                 </div>
-                <div  class="col-md-4">
-                    <input class="form-control form-control-sm" type="text" placeholder="0">
-                    INICIATIVA
+                <div class="col-md-4">
+                  <input class="form-control form-control-sm" type="text" :placeholder="proeficiencias.de">
+                  <!-- <p class="border pl-1 h-40 pt-2">0</p> -->
+                  <p class="text-center">Iniciativa</p>
                 </div>
-                <div  class="col-md-4">
-                    <input class="form-control form-control-sm" type="text" placeholder="0">
-                    DESLOC.
+                <div class="col-md-4">
+                  <input class="form-control form-control-sm" type="text" placeholder="0">
+                  <p class="text-center">Desloc.</p>
                 </div>
               </div>
               <div class="row">
-                  <div class="col-md-4">
-                      <input class="form-control form-control-sm" type="text" placeholder="0">
-                  </div>
-                  <div class="offset-md-4 col-md-4">
-                      <input class="form-control form-control-sm" type="text" placeholder="0">
-                  </div>
+                <div class="col-md-4">
+                  <input class="form-control form-control-sm" type="text" placeholder="0">
+                  <p class="text-center">PV total</p>
+                </div>
+                <div class="offset-md-4 col-md-4">
+                  <input class="form-control form-control-sm" type="text" placeholder="0">
+                  <p class="text-center">PV atual</p>
+                </div>
               </div>
               <div class="row">
-                  <div class="offset-md-4 col-md-4">
-                      <input class="form-control form-control-sm" type="text" placeholder="0">
-                  </div>
+                <div class="offset-md-4 col-md-4">
+                  <input class="form-control form-control-sm" type="text" placeholder="0">
+                  <p class="text-center">PV temporario</p>
+                </div>
               </div>
               <div class="row">
-                  <div class="col-md-4">
-                      <input class="form-control form-control-sm" type="text" placeholder="0">
+                <div class="col-md-4">
+                  <input class="form-control form-control-sm" type="text" placeholder="0">
+                  <p class="text-center">Dados vida</p>
+                </div>
+                <div class="col-md-4 border border-right-0 pt-2">
+                  <div class="row">
+                    <p class="col-md-12 text-right">Sucesso:</p>
                   </div>
-                  <div class="offset-md-4 col-md-4">
-                      <div class="row">
-                          <div class="col-md-4">
-                              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                          </div>
-                          <div class="col-md-4">
-                              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                          </div>
-                          <div class="col-md-4">
-                              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                          </div>
-                      </div>
-                      <div class="row pt-4">
-                          <div class="col-md-4">
-                              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                          </div>
-                          <div class="col-md-4">
-                              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                          </div>
-                          <div class="col-md-4">
-                              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                          </div>
-                      </div>
+                  <div class="row">
+                    <p class="col-md-12 text-right mt-n3">Fracasso:</p>
                   </div>
+                </div>
+                <div class="col-md-4 border border-left-0 pt-2">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                    </div>
+                    <div class="col-md-4">
+                      <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                    </div>
+                    <div class="col-md-4">
+                      <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                    </div>
+                  </div>
+                  <div class="row pt-4">
+                    <div class="col-md-4">
+                      <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                    </div>
+                    <div class="col-md-4">
+                      <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                    </div>
+                    <div class="col-md-4">
+                      <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="card">
+          <div class="card mt-1">
             <div class="card-body">
+              <h6 class="text-center">Armas</h6>
               <div class="row">
-                  <div class="col-md-4">
-                      <input class="form-control form-control-sm" type="text" placeholder="0">
-                  </div>
-                  <div  class="col-md-4">
-                      <input class="form-control form-control-sm" type="text" placeholder="0">
-                  </div>
-                  <div  class="col-md-4">
-                      <input class="form-control form-control-sm" type="text" placeholder="0">
-                  </div>
+                <div class="col-md-4">
+                  <p class="text-center">Nome</p>
+                </div>
+                <div class="col-md-4">
+                  <p class="text-center">Bonus</p>
+                </div>
+                <div class="col-md-4">
+                  <p class="text-center">Dano/tipo</p>
+                </div>
               </div>
               <div class="row">
-                  <div class="col-md-4">
-                      <input class="form-control form-control-sm" type="text" placeholder="0">
-                  </div>
-                  <div  class="col-md-4">
-                      <input class="form-control form-control-sm" type="text" placeholder="0">
-                  </div>
-                  <div  class="col-md-4">
-                      <input class="form-control form-control-sm" type="text" placeholder="0">
-                  </div>
+                <div class="col-md-4">
+                  <input class="form-control form-control-sm" type="text" placeholder="Nome">
+                </div>
+                <div class="col-md-4">
+                  <input class="form-control form-control-sm" type="text" placeholder="Bonus">
+                </div>
+                <div class="col-md-4">
+                  <input class="form-control form-control-sm" type="text" placeholder="Dano/tipo">
+                </div>
               </div>
-              <div class="row">
-                  <div class="col-md-4">
-                      <input class="form-control form-control-sm" type="text" placeholder="0">
-                  </div>
-                  <div  class="col-md-4">
-                      <input class="form-control form-control-sm" type="text" placeholder="0">
-                  </div>
-                  <div  class="col-md-4">
-                      <input class="form-control form-control-sm" type="text" placeholder="0">
-                  </div>
+              <div class="row pt-2">
+                <div class="col-md-4">
+                  <input class="form-control form-control-sm" type="text" placeholder="Nome">
+                </div>
+                <div class="col-md-4">
+                  <input class="form-control form-control-sm" type="text" placeholder="Bonus">
+                </div>
+                <div class="col-md-4">
+                  <input class="form-control form-control-sm" type="text" placeholder="Dano/tipo">
+                </div>
+              </div>
+              <div class="row pt-2">
+                <div class="col-md-4">
+                  <input class="form-control form-control-sm" type="text" placeholder="Nome">
+                </div>
+                <div class="col-md-4">
+                  <input class="form-control form-control-sm" type="text" placeholder="Bonus">
+                </div>
+                <div class="col-md-4">
+                  <input class="form-control form-control-sm" type="text" placeholder="Dano/tipo">
+                </div>
               </div>
             </div>
           </div>
-          <div class="card">
+          <div class="card mt-1">
             <div class="card-body">
-                <div class="form-group">
-                    <textarea style="resize: none" class="form-control" id="exampleFormControlTextarea1"
-                      rows="5"></textarea>
-                    <label for="campo3">ATAQUES E MAGIAS</label>
-                  </div>
+              <div class="form-group">
+                <textarea style="resize: none" class="form-control" id="exampleFormControlTextarea1"
+                  rows="5"></textarea>
+                <h6>Ataques e magias</h6>
+              </div>
+            </div>
+          </div>
+          <div class="card mt-1">
+            <div class="card-body">
+              <div class="form-group">
+                <textarea style="resize: none" class="form-control" id="exampleFormControlTextarea1"
+                  rows="5"></textarea>
+                <h6>Idiomas e proeficiencias</h6>
+              </div>
             </div>
           </div>
         </div>
@@ -528,32 +426,32 @@
               <div class="form-group">
                 <textarea style="resize: none" class="form-control" id="exampleFormControlTextarea1"
                   rows="5"></textarea>
-                <label for="campo3">IDEAIS</label>
+                <h6>Traços de personalidade</h6>
               </div>
               <div class="form-group">
                 <textarea style="resize: none" class="form-control" id="exampleFormControlTextarea1"
                   rows="5"></textarea>
-                <label for="campo3">LIGAÇÕES</label>
+                <h6>Ideais</h6>
               </div>
               <div class="form-group">
                 <textarea style="resize: none" class="form-control" id="exampleFormControlTextarea1"
                   rows="5"></textarea>
-                <label for="campo3">DEFEITOS</label>
+                <h6>Ligações</h6>
               </div>
               <div class="form-group">
                 <textarea style="resize: none" class="form-control" id="exampleFormControlTextarea1"
                   rows="5"></textarea>
-                <label for="campo3">CARACTERISTICAS E HABILIDADES</label>
+                <h6>Defeitos</h6>
               </div>
             </div>
           </div>
-          <div class="card">
+          <div class="card mt-1">
             <div class="card-body">
-                <div class="form-group">
-                    <textarea style="resize: none" class="form-control" id="exampleFormControlTextarea1"
-                      rows="10"></textarea>
-                    <label for="campo3">CARACTERÍSTICAS E HABILIDADES</label>
-                  </div>
+              <div class="form-group">
+                <textarea style="resize: none" class="form-control" id="exampleFormControlTextarea1"
+                  rows="10"></textarea>
+                <h6>Caracteristicas e habilidades</h6>
+              </div>
             </div>
           </div>
         </div>
@@ -568,6 +466,102 @@
 
   <!-- Plugin JavaScript -->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+
+  <script>
+    // start app
+    new Vue({
+      el: '#app1',
+
+      created() {
+
+      },
+      data: {
+        proeficiencias: {
+          fo: 0,
+          de: 0,
+          co: 0,
+          in: 0,
+          sa: 0,
+          ca: 0
+        },
+        pericias: [
+          {nome:'Acrobacia', tipo: 2}, 
+          {nome:'Arcanismo', tipo: 4},
+          {nome:'Atletismo', tipo: 1}, 
+          {nome:'Atuação', tipo: 6}, 
+          {nome:'Blefar', tipo: 5}, 
+          {nome:'Furtividade', tipo: 2}, 
+          {nome:'História', tipo: 4},
+          {nome:'Intimidação', tipo: 5}, 
+          {nome:'Intuição', tipo: 6},
+          {nome:'Investigação', tipo: 4}, 
+          {nome:'Lidar com Animais', tipo: 6}, 
+          {nome:'Medicina', tipo: 6}, 
+          {nome:'Natureza', tipo: 4}, 
+          {nome:'Percepção', tipo: 6},
+          {nome:'Persuasão', tipo: 5},
+          {nome:'Prestidigitação', tipo: 2}, 
+          {nome:'Religião', tipo: 4},
+          {nome:'Sobrevivência', tipo: 5}
+      ],
+        forca: '',
+        destreza: '',
+        constituicao: '',
+        inteligencia: '',
+        sabedoria: '',
+        carisma: '',
+
+
+      },
+
+      methods: {
+        computar: function(val){
+          this.proeficiencias.fo = (val/2)-5; 
+          this.proeficiencias.fo = Math.trunc(this.proeficiencias.fo);
+          console.log(this.proeficiencias.fo);
+        }
+      },
+
+      watch: {
+        forca: function() {
+          this.proeficiencias.fo = (this.forca/2)-5; 
+          this.proeficiencias.fo = Math.trunc(this.proeficiencias.fo);
+          // console.log(this.proeficiencias.fo);
+        },
+        destreza: function() {
+          this.proeficiencias.de = (this.destreza/2)-5; 
+          this.proeficiencias.de = Math.trunc(this.proeficiencias.de);
+          // console.log(this.proeficiencias.de);
+        },
+        constituicao: function() {
+          this.proeficiencias.co = (this.constituicao/2)-5; 
+          this.proeficiencias.co = Math.trunc(this.proeficiencias.co);
+          // console.log(this.proeficiencias.co);
+        },
+        inteligencia: function() {
+          this.proeficiencias.in = (this.inteligencia/2)-5; 
+          this.proeficiencias.in = Math.trunc(this.proeficiencias.in);
+          // console.log(this.proeficiencias.in);
+        },
+        sabedoria: function() {
+          this.proeficiencias.sa = (this.sabedoria/2)-5; 
+          this.proeficiencias.sa = Math.trunc(this.proeficiencias.sa);
+          // console.log(this.proeficiencias.sa);
+        },
+        carisma: function() {
+          this.proeficiencias.ca = (this.carisma/2)-5; 
+          this.proeficiencias.ca = Math.trunc(this.proeficiencias.ca);
+          // console.log(this.proeficiencias.ca);
+        }
+
+      }
+
+    })
+  </script>
 
 </body>
 

@@ -18,9 +18,31 @@ body {
 
 .card-att{
   padding: 0.5rem;
-  height: 100px;
+  height: 135px;
   border: 0.1rem solid #161616;
   border-radius: 10px;
+}
+
+.circulo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 0.1rem solid #161616;
+}
+
+.borda{
+  height: 80px;
+  border: 0.1rem solid #161616;
+  border-radius: 10px;
+}
+
+.bordateste{
+  margin-top: 9px;
+  border: 0.1rem solid #161616;
+  border-radius: 10px;
+}
+p{
+  font-size: 15px;
 }
 
 .card-info{

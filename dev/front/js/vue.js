@@ -164,7 +164,7 @@ Vue.component('alerta-senha', {
               local.alertas.log = 2;
           }
           if(local.saida.erro.erroLog == 3){
-              window.location.assign("inicio.php");
+              window.location.assign("inicio.html");
           }
         })
 
