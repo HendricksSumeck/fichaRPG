@@ -1,5 +1,5 @@
 body {
-  background-image: url(../img/papel.jpg);
+  background-image: url(../img/ficha1.jpg);
 }
 
 #imgPerfil {
@@ -16,7 +16,37 @@ body {
   border-bottom: 0.25rem solid #161616;
 }
 
+@font-face {
+  font-family: TheWildBreathofZelda;
+  src: url(../css/TheWildBreathofZelda.otf);
+} 
+
+/* @font-face {
+  font-family: BreatheFire;
+  src: url(../css/BreatheFire.otf);
+}  */
+
+@font-face {
+  font-family: VecnaItalic;
+  src: url(../css/VecnaItalic.otf);
+} 
+
+
+h1{
+  font-family: TheWildBreathofZelda;
+  color: white;
+  font-size: 70px;
+  text-decoration: overline;
+}
+
+P{
+  font-family: VecnaItalic;
+  font-weight: bold;
+}
+
 .card-att{
+  font-family: VecnaItalic;
+
   padding: 0.5rem;
   height: 135px;
   border: 0.1rem solid #161616;
@@ -65,6 +95,8 @@ p{
 }
 
 .card hr {
+  font-family: VecnaItalic;
+
   border-color: #64a19d;
   border-width: 0.25rem;
   width: 3rem;
