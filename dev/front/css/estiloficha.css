@@ -44,9 +44,13 @@ P{
   font-weight: bold;
 }
 
+h6{
+  font-family: VecnaItalic;
+  font-weight: bold;
+}
+
 .card-att{
   font-family: VecnaItalic;
-
   padding: 0.5rem;
   height: 135px;
   border: 0.1rem solid #161616;
