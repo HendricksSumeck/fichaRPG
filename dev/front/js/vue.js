@@ -18,6 +18,10 @@ Vue.component('alerta-senha', {
   template: '#senhaIncorreta'
 })
 
+Vue.component('alerta-fracasso', {
+  template: '#alertaFracasso'
+})
+
 
   // start app
   new Vue({

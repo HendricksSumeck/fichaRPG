@@ -28,8 +28,8 @@
               <div class="form-group">
                 <label for="pwd">Senha:</label>
                 <input v-model="senhaLog" class="tamanho_div" type="password" class="form-control">
-				<alerta-senha v-if="alertas.log == 1">Email não existe</alerta-senha>
-				<alerta-senha v-if="alertas.log == 2">Senha invalida</alerta-senha>
+                <alerta-fracasso v-if="alertas.log == 1" class="tamanho_div2">Email não existe</alerta-fracasso> 
+                <alerta-fracasso v-if="alertas.log == 2" class="tamanho_div2">Senha invalida</alerta-fracasso> 
               </div>
 
             <span @click="loginUsuario" class="btn btn-danger">Entrar</span>
@@ -105,6 +105,14 @@
         </div>
     </transition>
 </template>
+
+<template id="alertaFracasso">
+        <transition name="fade">
+            <div class="alert alert-danger" role="alert">
+                <slot>Fracasso<slot>
+            </div>
+        </transition>
+    </template>
 
 <template id="alertaValido">
     <transition name="fade">

@@ -522,42 +522,31 @@
 
       methods: {
         computar: function(val){
-          this.proeficiencias.fo = (val/2)-5; 
-          this.proeficiencias.fo = Math.trunc(this.proeficiencias.fo);
-          console.log(this.proeficiencias.fo);
+          var valor;
+          valor = (val/2)-5; 
+          valor = Math.trunc(valor);
+          return valor;
         }
       },
 
       watch: {
         forca: function() {
-          this.proeficiencias.fo = (this.forca/2)-5; 
-          this.proeficiencias.fo = Math.trunc(this.proeficiencias.fo);
-          // console.log(this.proeficiencias.fo);
+          this.proeficiencias.fo = this.computar(this.forca);
         },
         destreza: function() {
-          this.proeficiencias.de = (this.destreza/2)-5; 
-          this.proeficiencias.de = Math.trunc(this.proeficiencias.de);
-          // console.log(this.proeficiencias.de);
+          this.proeficiencias.de = this.computar(this.destreza);
         },
         constituicao: function() {
-          this.proeficiencias.co = (this.constituicao/2)-5; 
-          this.proeficiencias.co = Math.trunc(this.proeficiencias.co);
-          // console.log(this.proeficiencias.co);
+          this.proeficiencias.co = this.computar(this.constituicao);
         },
         inteligencia: function() {
-          this.proeficiencias.in = (this.inteligencia/2)-5; 
-          this.proeficiencias.in = Math.trunc(this.proeficiencias.in);
-          // console.log(this.proeficiencias.in);
+          this.proeficiencias.in = this.computar(this.inteligencia);
         },
         sabedoria: function() {
-          this.proeficiencias.sa = (this.sabedoria/2)-5; 
-          this.proeficiencias.sa = Math.trunc(this.proeficiencias.sa);
-          // console.log(this.proeficiencias.sa);
+          this.proeficiencias.sa = this.computar(this.sabedoria);
         },
         carisma: function() {
-          this.proeficiencias.ca = (this.carisma/2)-5; 
-          this.proeficiencias.ca = Math.trunc(this.proeficiencias.ca);
-          // console.log(this.proeficiencias.ca);
+          this.proeficiencias.ca = this.computar(this.carisma);
         }
 
       }
